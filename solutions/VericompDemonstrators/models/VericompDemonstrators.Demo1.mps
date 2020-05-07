@@ -92,11 +92,14 @@
       </concept>
     </language>
     <language id="a8f70f9e-ef01-499f-885c-c79273fa1695" name="Algorithm">
+      <concept id="8431561705660014078" name="Algorithm.structure.ScheduleStatementList" flags="ng" index="2qD35c">
+        <child id="8431561705660014082" name="statements" index="2qD3aK" />
+      </concept>
       <concept id="349167071911517046" name="Algorithm.structure.FixedSizeArrayDataBlock" flags="ng" index="slerG">
         <property id="349167071911849189" name="size" index="sit5Z" />
         <child id="349167071911517047" name="index" index="slerH" />
       </concept>
-      <concept id="349167071914761882" name="Algorithm.structure.LoopSchedulerBlock" flags="ng" index="spAc0">
+      <concept id="349167071914761882" name="Algorithm.structure.StatementBasedSchedulerBlock" flags="ng" index="spAc0">
         <child id="8213653556241840446" name="schedule" index="1e5ZHq" />
       </concept>
       <concept id="2483553733153713492" name="Algorithm.structure.DataBlock" flags="ng" index="vjVuy">
@@ -165,21 +168,12 @@
     <node concept="1OHxBU" id="2dCct2EP1fV" role="2YOnzZ">
       <property role="TrG5h" value="q" />
       <property role="1OHxBQ" value="6po$YwiVCCm/In" />
-      <node concept="10Q1$e" id="C3WJzlYcib" role="1OHwi9">
+      <node concept="10Q1$e" id="1W5BUKIeMbf" role="1OHwi9">
         <node concept="1QUT1O" id="2dCct2EP1g1" role="10Q1$1" />
       </node>
     </node>
     <node concept="spAc0" id="2dCct2EOm3r" role="3SlQUj">
       <property role="TrG5h" value="sched" />
-      <node concept="1e5Z70" id="2dCct2EP13a" role="1e5ZHq">
-        <ref role="1e5Z7f" node="2dCct2EP132" resolve="has_next" />
-        <node concept="1e5Z75" id="2dCct2EP13f" role="1e5Z71">
-          <ref role="LPJVy" node="2dCct2EOm3$" resolve="sched_fpk_trigger" />
-        </node>
-        <node concept="1e5Z75" id="2dCct2EP13k" role="1e5Z71">
-          <ref role="LPJVy" node="2dCct2EOm3B" resolve="sched_to_compose_trigger" />
-        </node>
-      </node>
       <node concept="1OHxBU" id="2dCct2EP132" role="1prWzT">
         <property role="TrG5h" value="has_next" />
         <property role="1OHxBQ" value="6po$YwiVCCm/In" />
@@ -196,6 +190,17 @@
       <node concept="1pt3V6" id="2dCct2EOm3B" role="1OHzVH">
         <property role="TrG5h" value="sched_to_compose_trigger" />
         <property role="2_BrWT" value="3EtQu_uj5i/Out" />
+      </node>
+      <node concept="1e5Z70" id="1W5BUKIj0mu" role="1e5ZHq">
+        <ref role="1e5Z7f" node="2dCct2EP132" resolve="has_next" />
+        <node concept="2qD35c" id="1W5BUKIj0mT" role="1e5Z71">
+          <node concept="1e5Z75" id="1W5BUKIj0mY" role="2qD3aK">
+            <ref role="LPJVy" node="2dCct2EOm3$" resolve="sched_fpk_trigger" />
+          </node>
+          <node concept="1e5Z75" id="1W5BUKIj0n4" role="2qD3aK">
+            <ref role="LPJVy" node="2dCct2EOm3B" resolve="sched_to_compose_trigger" />
+          </node>
+        </node>
       </node>
     </node>
     <node concept="1OHxBB" id="2dCct2EOm3b" role="3SlQUq">
@@ -244,7 +249,9 @@
       <node concept="1OHxBU" id="2dCct2EOlZ4" role="2YOnzZ">
         <property role="TrG5h" value="fpk_q" />
         <property role="1OHxBQ" value="6po$YwiVCCm/In" />
-        <node concept="1QUT1O" id="2dCct2EOlZa" role="1OHwi9" />
+        <node concept="10Q1$e" id="1W5BUKIeMbq" role="1OHwi9">
+          <node concept="1QUT1O" id="2dCct2EOlZa" role="10Q1$1" />
+        </node>
       </node>
       <node concept="1OHxBU" id="2dCct2EOlZd" role="2YOnzZ">
         <property role="TrG5h" value="fpk_x" />
