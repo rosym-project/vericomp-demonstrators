@@ -8,11 +8,13 @@
     <use id="218e40b4-75d4-4de8-83e6-b31e4da8bcee" name="Component" version="0" />
     <use id="88e31b22-f7a1-4ed1-a668-9711cad402e2" name="Geometry" version="0" />
     <use id="17ce8e5a-8510-4af6-a493-490e056b4626" name="ComponentBehavior" version="0" />
+    <use id="14d6bc92-051d-4467-84c8-9af7439a864f" name="Orocos" version="0" />
     <engage id="220ebd78-4354-48ba-85f8-2de2357f7b2c" name="KinematicChains_CGenerator" />
     <engage id="4209fc66-8ed6-4cfe-bc99-5976c8a8f0b5" name="Controller_CGenerator" />
     <engage id="8d7c3baa-c6d4-442a-843a-34b7b957af1e" name="Algorithm_CGenerator" />
     <engage id="99a33176-f2ba-469b-b8f8-df38e8025aba" name="Geometry_CGenerator" />
     <engage id="799e1c52-9b30-4cc9-95fb-3ef4e103cc77" name="ComponentOrocosGenerator" />
+    <engage id="39e764cb-e4fa-4923-82f4-60e672350a27" name="OrocosProgramScript" />
   </languages>
   <imports />
   <registry>
@@ -144,7 +146,13 @@
         <child id="7374807014778509153" name="type" index="1OHwi9" />
       </concept>
     </language>
+    <language id="14d6bc92-051d-4467-84c8-9af7439a864f" name="Orocos">
+      <concept id="6641102591361616477" name="Orocos.structure.IMOrocos" flags="ng" index="2R8en3" />
+    </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <child id="5169995583184591170" name="smodelAttribute" index="lGtFl" />
+      </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
       </concept>
@@ -236,7 +244,7 @@
       <ref role="1OHyup" node="2dCct2EOm15" resolve="x_rel" />
     </node>
     <node concept="1yj6R4" id="2dCct2EOiSX" role="3SlQUd">
-      <property role="TrG5h" value="fpk" />
+      <property role="TrG5h" value="fpk2" />
       <node concept="1pt3V6" id="2dCct2EOm1J" role="2YOnzW">
         <property role="TrG5h" value="fpk_trigger" />
         <property role="2_BrWT" value="3EtQu_uj5h/In" />
@@ -377,6 +385,9 @@
       <node concept="FWJLR" id="2dCct2EPs9E" role="l9eUl">
         <ref role="FWJLQ" node="2dCct2EPs9p" resolve="xd_ee" />
       </node>
+      <node concept="2R8en3" id="21FIbDwC6BM" role="lGtFl">
+        <property role="TrG5h" value="Orocos (Software Platform)" />
+      </node>
     </node>
     <node concept="2WYcwU" id="2dCct2EPrs7" role="3ttgI2">
       <property role="TrG5h" value="gen3" />
@@ -407,6 +418,9 @@
       </node>
       <node concept="FWJLR" id="2dCct2EPrss" role="l9eUl">
         <ref role="FWJLQ" node="2dCct2EPrpI" resolve="cartesian_velocity_command" />
+      </node>
+      <node concept="2R8en3" id="21FIbDwC6C$" role="lGtFl">
+        <property role="TrG5h" value="Orocos (Software Platform)" />
       </node>
     </node>
   </node>
@@ -462,6 +476,12 @@
     <node concept="3tthn1" id="2dCct2EPrpy" role="3ttZ$n">
       <property role="TrG5h" value="Gen3Component" />
       <property role="3ttlnV" value=".." />
+    </node>
+  </node>
+  <node concept="1u3Uyy" id="5cmir0BXDNp">
+    <node concept="1pt3V6" id="5cmir0BXDNq" role="2YOnzW">
+      <property role="TrG5h" value="trigger" />
+      <property role="2_BrWT" value="3EtQu_uj5h/In" />
     </node>
   </node>
 </model>
