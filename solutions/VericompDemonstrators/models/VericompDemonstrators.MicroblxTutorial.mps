@@ -132,6 +132,13 @@
       </concept>
     </language>
     <language id="9356c85b-d8d9-4f77-a6c3-7a0852b5bf29" name="Controller">
+      <concept id="7556790644811833496" name="Controller.structure.Sum" flags="ng" index="2yRzQl">
+        <child id="6358669349290676744" name="signs" index="SB1Ct" />
+      </concept>
+      <concept id="6358669349290676739" name="Controller.structure.SignedPort" flags="ng" index="SB1Cm">
+        <property id="6358669349290676742" name="sign" index="SB1Cj" />
+        <reference id="6358669349290676740" name="port" index="SB1Ch" />
+      </concept>
       <concept id="6062623272280885151" name="Controller.structure.Gain" flags="ng" index="3zsOgx" />
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
@@ -140,13 +147,6 @@
       </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
-      </concept>
-      <concept id="709746936026466394" name="jetbrains.mps.lang.core.structure.ChildAttribute" flags="ng" index="3VBwX9">
-        <property id="709746936026609031" name="linkId" index="3V$3ak" />
-        <property id="709746936026609029" name="role_DebugInfo" index="3V$3am" />
-      </concept>
-      <concept id="4452961908202556907" name="jetbrains.mps.lang.core.structure.BaseCommentAttribute" flags="ng" index="1X3_iC">
-        <child id="3078666699043039389" name="commentedNode" index="8Wnug" />
       </concept>
     </language>
     <language id="a5949a30-34e6-4033-823a-25cc66135ce1" name="Microblx">
@@ -170,8 +170,8 @@
     <node concept="3tteAs" id="5CpI4wBBSLd" role="3ttcQl">
       <property role="1T6LxX" value="378Eyp8OV9o/Output" />
       <property role="TrG5h" value="pos" />
-      <node concept="10Q1$e" id="5CpI4wBBSLn" role="17RAGi">
-        <node concept="10P55v" id="5CpI4wBBSLj" role="10Q1$1" />
+      <node concept="10Q1$e" id="5kHO6zGSt2$" role="17RAGi">
+        <node concept="10P55v" id="5kHO6zGSt2_" role="10Q1$1" />
       </node>
     </node>
     <node concept="3tteA$" id="5CpI4wBBSLx" role="3ttcQl">
@@ -220,6 +220,10 @@
         <node concept="1XHb3G" id="5CpI4wBFrMN" role="2UjYXA">
           <ref role="1XHb3H" node="5CpI4wBBSNZ" resolve="gain" />
           <ref role="2UjYXp" node="5CpI4wBCx9m" resolve="gain" />
+        </node>
+        <node concept="1XHb3G" id="7h1sGqo82Rl" role="2UjYXA">
+          <ref role="1XHb3H" node="5CpI4wBBSO6" resolve="target_pos" />
+          <ref role="2UjYXp" node="5CpI4wBCx90" resolve="target" />
         </node>
       </node>
     </node>
@@ -295,7 +299,7 @@
               <property role="$nhwW" value="4.5" />
             </node>
             <node concept="3b6qkQ" id="5CpI4wBCx46" role="3g7hyw">
-              <property role="$nhwW" value="4.5" />
+              <property role="$nhwW" value="-2.0" />
             </node>
           </node>
         </node>
@@ -313,8 +317,51 @@
   </node>
   <node concept="1u3Uyy" id="5CpI4wBCx6O">
     <property role="TrG5h" value="ControllerStep" />
+    <node concept="2yRzQl" id="7h1sGqo82Se" role="3SlQUd">
+      <property role="TrG5h" value="sum" />
+      <node concept="SB1Cm" id="7h1sGqo82SD" role="SB1Ct">
+        <ref role="SB1Ch" node="7h1sGqo82SI" resolve="target" />
+      </node>
+      <node concept="SB1Cm" id="7h1sGqo82SF" role="SB1Ct">
+        <property role="SB1Cj" value="5wYy1lwCD80/Negative" />
+        <ref role="SB1Ch" node="7h1sGqo82SY" resolve="measured" />
+      </node>
+      <node concept="1pt3V6" id="7h1sGqo82Sf" role="2YOnzW">
+        <property role="TrG5h" value="trigger" />
+        <property role="2_BrWT" value="3EtQu_uj5h/In" />
+      </node>
+      <node concept="1OHxBU" id="7h1sGqo82Sg" role="2YOnzZ">
+        <property role="1OHxBQ" value="6po$YwiVCCn/Out" />
+        <property role="TrG5h" value="output_sum" />
+        <node concept="10Q1$e" id="7h1sGqo82S$" role="1OHwi9">
+          <node concept="10P55v" id="7h1sGqo82Sx" role="10Q1$1" />
+        </node>
+      </node>
+      <node concept="1OHxBU" id="7h1sGqo82SI" role="2YOnzZ">
+        <property role="TrG5h" value="target" />
+        <property role="1OHxBQ" value="6po$YwiVCCm/In" />
+        <node concept="10Q1$e" id="7h1sGqo82ST" role="1OHwi9">
+          <node concept="10P55v" id="7h1sGqo82SP" role="10Q1$1" />
+        </node>
+      </node>
+      <node concept="1OHxBU" id="7h1sGqo82SY" role="2YOnzZ">
+        <property role="TrG5h" value="measured" />
+        <property role="1OHxBQ" value="6po$YwiVCCm/In" />
+        <node concept="10Q1$e" id="7h1sGqo82Tc" role="1OHwi9">
+          <node concept="10P55v" id="7h1sGqo82T8" role="10Q1$1" />
+        </node>
+      </node>
+    </node>
+    <node concept="1OHxBB" id="7h1sGqo82TT" role="3SlQUq">
+      <ref role="1OHxBS" node="5CpI4wBCx90" resolve="target" />
+      <ref role="1OHyup" node="7h1sGqo82SI" resolve="target" />
+    </node>
     <node concept="1OHxBB" id="5CpI4wBCxo8" role="3SlQUq">
       <ref role="1OHxBS" node="5CpI4wBCx6S" resolve="measured_pos" />
+      <ref role="1OHyup" node="7h1sGqo82SY" resolve="measured" />
+    </node>
+    <node concept="1OHxBB" id="7h1sGqo82TC" role="3SlQUq">
+      <ref role="1OHxBS" node="7h1sGqo82Sg" resolve="output_sum" />
       <ref role="1OHyup" node="5CpI4wBCxmR" resolve="input" />
     </node>
     <node concept="1OHxBB" id="5CpI4wBCxom" role="3SlQUq">
@@ -324,6 +371,10 @@
     <node concept="1OHxBB" id="5CpI4wBCxo_" role="3SlQUq">
       <ref role="1OHxBS" node="5CpI4wBCxmS" resolve="output" />
       <ref role="1OHyup" node="5CpI4wBCx7w" resolve="commanded_vel" />
+    </node>
+    <node concept="1psEHa" id="7h1sGqo82Ts" role="1psEGK">
+      <ref role="1psEHb" node="7h1sGqo82Tk" resolve="sum" />
+      <ref role="1psEGP" node="7h1sGqo82Sf" resolve="trigger" />
     </node>
     <node concept="1psEHa" id="5CpI4wBCxnP" role="1psEGK">
       <ref role="1psEHb" node="5CpI4wBCxnL" resolve="gain" />
@@ -347,15 +398,11 @@
         <node concept="10P55v" id="5CpI4wBCx7D" role="10Q1$1" />
       </node>
     </node>
-    <node concept="1X3_iC" id="5CpI4wBCxoP" role="lGtFl">
-      <property role="3V$3am" value="data_ports" />
-      <property role="3V$3ak" value="a8f70f9e-ef01-499f-885c-c79273fa1695/3725923812855012100/3725923812855012104" />
-      <node concept="1OHxBU" id="5CpI4wBCx90" role="8Wnug">
-        <property role="TrG5h" value="target" />
-        <property role="1OHxBQ" value="6po$YwiVCCm/In" />
-        <node concept="10Q1$e" id="5CpI4wBCx9h" role="1OHwi9">
-          <node concept="10P55v" id="5CpI4wBCx9d" role="10Q1$1" />
-        </node>
+    <node concept="1OHxBU" id="5CpI4wBCx90" role="2YOnzZ">
+      <property role="TrG5h" value="target" />
+      <property role="1OHxBQ" value="6po$YwiVCCm/In" />
+      <node concept="10Q1$e" id="5CpI4wBCx9h" role="1OHwi9">
+        <node concept="10P55v" id="5CpI4wBCx9d" role="10Q1$1" />
       </node>
     </node>
     <node concept="1OHxBU" id="5CpI4wBCx9m" role="2YOnzZ">
@@ -399,9 +446,16 @@
     </node>
     <node concept="2__D7_" id="5CpI4wBCxnw" role="3SlQUj">
       <property role="TrG5h" value="step" />
+      <node concept="2_qZNI" id="7h1sGqo82To" role="2__D7$">
+        <ref role="2_qZNH" node="7h1sGqo82Tk" resolve="sum" />
+      </node>
       <node concept="1pt3V6" id="5CpI4wBCxo5" role="1OHzVH">
         <property role="TrG5h" value="start" />
         <property role="2_BrWT" value="3EtQu_uj5h/In" />
+      </node>
+      <node concept="1pt3V6" id="7h1sGqo82Tk" role="1OHzVH">
+        <property role="TrG5h" value="sum" />
+        <property role="2_BrWT" value="3EtQu_uj5i/Out" />
       </node>
       <node concept="1pt3V6" id="5CpI4wBCxnL" role="1OHzVH">
         <property role="TrG5h" value="gain" />
