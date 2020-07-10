@@ -88,9 +88,11 @@
       <concept id="5130055757462273192" name="ComponentBehavior.structure.SimpleLifeCycle" flags="ng" index="2Uju8J">
         <child id="5130055757462274652" name="updateBehavior" index="2UjhNr" />
       </concept>
-      <concept id="5130055757462401499" name="ComponentBehavior.structure.PortMapping" flags="ng" index="2UjYXs">
-        <reference id="5130055757462401502" name="algorithmPort" index="2UjYXp" />
+      <concept id="5130055757462401499" name="ComponentBehavior.structure.PortToPortMapping" flags="ng" index="2UjYXs">
         <reference id="5130055757462401500" name="componentPort" index="2UjYXr" />
+      </concept>
+      <concept id="6492422957874134487" name="ComponentBehavior.structure.ToPortMapping" flags="ng" index="1XH0mv">
+        <reference id="5130055757462401502" name="algorithmPort" index="2UjYXp" />
       </concept>
     </language>
     <language id="a8f70f9e-ef01-499f-885c-c79273fa1695" name="Algorithm">
@@ -357,7 +359,7 @@
       <property role="TrG5h" value="ctrl_life_cycle" />
       <node concept="2UjhQb" id="2dCct2EP1fP" role="2UjhNr">
         <ref role="2UjhEm" node="2dCct2EOiSW" resolve="CtrlAlgorithm" />
-        <node concept="2UjYXs" id="2dCct2EP1fR" role="2UjYXA">
+        <node concept="2UjYXs" id="7h1sGqo1loH" role="2UjYXA">
           <ref role="2UjYXr" node="2dCct2EP1f1" resolve="q" />
           <ref role="2UjYXp" node="2dCct2EP1fV" resolve="q" />
         </node>
@@ -476,12 +478,6 @@
     <node concept="3tthn1" id="2dCct2EPrpy" role="3ttZ$n">
       <property role="TrG5h" value="Gen3Component" />
       <property role="3ttlnV" value=".." />
-    </node>
-  </node>
-  <node concept="1u3Uyy" id="5cmir0BXDNp">
-    <node concept="1pt3V6" id="5cmir0BXDNq" role="2YOnzW">
-      <property role="TrG5h" value="trigger" />
-      <property role="2_BrWT" value="3EtQu_uj5h/In" />
     </node>
   </node>
 </model>
