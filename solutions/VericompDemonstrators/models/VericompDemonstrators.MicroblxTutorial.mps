@@ -40,6 +40,10 @@
       </concept>
     </language>
     <language id="218e40b4-75d4-4de8-83e6-b31e4da8bcee" name="Component">
+      <concept id="7649431283796460216" name="Component.structure.SourceOfDeployment" flags="ng" index="emJY1">
+        <property id="7649431283796460564" name="source" index="emJ$H" />
+      </concept>
+      <concept id="8889624047655004319" name="Component.structure.PredefinedComponent" flags="ng" index="2wom5B" />
       <concept id="3475673830596210328" name="Component.structure.IPortRef" flags="ng" index="FWJLR">
         <reference id="3475673830596210329" name="port" index="FWJLQ" />
       </concept>
@@ -176,34 +180,6 @@
       <concept id="6492422957873206145" name="Microblx.structure.IMMicroblx" flags="ng" index="1XxyJ9" />
     </language>
   </registry>
-  <node concept="3tteAz" id="5CpI4wBBSL6">
-    <property role="TrG5h" value="Robot" />
-    <node concept="3tteAj" id="5CpI4wBBSLN" role="3ttcQu">
-      <property role="TrG5h" value="joint_velocity_limits" />
-      <node concept="10Q1$e" id="5CpI4wBBSLV" role="3ttcR6">
-        <node concept="10P55v" id="5CpI4wBBSLR" role="10Q1$1" />
-      </node>
-    </node>
-    <node concept="3tteAj" id="5CpI4wBBSM0" role="3ttcQu">
-      <property role="TrG5h" value="initial_position" />
-      <node concept="10Q1$e" id="5CpI4wBBSMb" role="3ttcR6">
-        <node concept="10P55v" id="5CpI4wBBSM7" role="10Q1$1" />
-      </node>
-    </node>
-    <node concept="3tteAs" id="5CpI4wBBSLd" role="3ttcQl">
-      <property role="1T6LxX" value="378Eyp8OV9o/Output" />
-      <property role="TrG5h" value="pos" />
-      <node concept="10Q1$e" id="5kHO6zGSt2$" role="17RAGi">
-        <node concept="10P55v" id="5kHO6zGSt2_" role="10Q1$1" />
-      </node>
-    </node>
-    <node concept="3tteA$" id="5CpI4wBBSLx" role="3ttcQl">
-      <property role="TrG5h" value="desired_vel" />
-      <node concept="10Q1$e" id="5CpI4wBBSLI" role="17RAGi">
-        <node concept="10P55v" id="5CpI4wBBSLE" role="10Q1$1" />
-      </node>
-    </node>
-  </node>
   <node concept="3tteAz" id="5CpI4wBBSNm">
     <property role="TrG5h" value="Controller" />
     <node concept="3tteA$" id="5CpI4wBBSNp" role="3ttcQl">
@@ -263,53 +239,56 @@
     <property role="TrG5h" value="System" />
     <node concept="3tteA_" id="5CpI4wBCv1R" role="3ttgI7">
       <property role="TrG5h" value="position" />
-      <ref role="3ttcQ_" node="5CpI4wBBSPC" />
       <ref role="3ttcQw" node="5CpI4wBBSQq" />
+      <ref role="3ttcQ_" node="7HuivzrlznH" />
     </node>
     <node concept="3tteA_" id="5CpI4wBCv1T" role="3ttgI7">
       <property role="TrG5h" value="velocity" />
       <ref role="3ttcQ_" node="5CpI4wBBSQr" />
-      <ref role="3ttcQw" node="5CpI4wBBSPD" />
+      <ref role="3ttcQw" node="7HuivzrlznI" />
     </node>
     <node concept="2WYcwU" id="5CpI4wBBSPu" role="3ttgI2">
       <property role="TrG5h" value="robot" />
-      <ref role="2WYf9R" node="5CpI4wBBSL6" resolve="Robot" />
-      <node concept="2WYd3i" id="5CpI4wBBSPA" role="2WYf99">
-        <ref role="2WYd3v" node="5CpI4wBBSLN" resolve="joint_velocity_limits" />
-        <node concept="2ShNRf" id="5CpI4wBCvtT" role="2WYd3h">
-          <node concept="3g6Rrh" id="5CpI4wBCwCv" role="2ShVmc">
-            <node concept="10P55v" id="5CpI4wBCvwo" role="3g7fb8" />
-            <node concept="3b6qkQ" id="5CpI4wBCwD3" role="3g7hyw">
-              <property role="$nhwW" value="0.5" />
-            </node>
-            <node concept="3b6qkQ" id="5CpI4wBCwDC" role="3g7hyw">
-              <property role="$nhwW" value="0.5" />
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="2WYd3i" id="5CpI4wBBSPB" role="2WYf99">
-        <ref role="2WYd3v" node="5CpI4wBBSM0" resolve="initial_position" />
-        <node concept="2ShNRf" id="5CpI4wBCwIC" role="2WYd3h">
-          <node concept="3g6Rrh" id="5CpI4wBCwOB" role="2ShVmc">
-            <node concept="10P55v" id="5CpI4wBCwN$" role="3g7fb8" />
-            <node concept="3b6qkQ" id="5CpI4wBCwU4" role="3g7hyw">
-              <property role="$nhwW" value="1.1" />
-            </node>
-            <node concept="3cmrfG" id="5CpI4wBCwUB" role="3g7hyw">
-              <property role="3cmrfH" value="1" />
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="FWJLR" id="5CpI4wBBSPC" role="l9eUl">
-        <ref role="FWJLQ" node="5CpI4wBBSLd" resolve="pos" />
-      </node>
-      <node concept="FWJLR" id="5CpI4wBBSPD" role="l9eUl">
-        <ref role="FWJLQ" node="5CpI4wBBSLx" resolve="desired_vel" />
-      </node>
+      <ref role="2WYf9R" node="7HuivzriEHL" resolve="Robot" />
       <node concept="1XxyJ9" id="5CpI4wBCuZF" role="lGtFl">
         <property role="TrG5h" value="Microblx (Software Platform)" />
+      </node>
+      <node concept="emJY1" id="7HuivzrePOR" role="lGtFl">
+        <property role="emJ$H" value="mod_robot" />
+      </node>
+      <node concept="2WYd3i" id="7HuivzrlznF" role="2WYf99">
+        <ref role="2WYd3v" node="7HuivzriEHY" resolve="joint_velocity_limits" />
+        <node concept="2ShNRf" id="7Huivzrm0MD" role="2WYd3h">
+          <node concept="3g6Rrh" id="7Huivzrm1YP" role="2ShVmc">
+            <node concept="10P55v" id="7Huivzrm1VH" role="3g7fb8" />
+            <node concept="3b6qkQ" id="7Huivzrm2dG" role="3g7hyw">
+              <property role="$nhwW" value="0.5" />
+            </node>
+            <node concept="3b6qkQ" id="7Huivzrm2eh" role="3g7hyw">
+              <property role="$nhwW" value="0.5" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="2WYd3i" id="7HuivzrlznG" role="2WYf99">
+        <ref role="2WYd3v" node="7HuivzriEI1" resolve="initial_position" />
+        <node concept="2ShNRf" id="7Huivzrm1Zp" role="2WYd3h">
+          <node concept="3g6Rrh" id="7Huivzrm27r" role="2ShVmc">
+            <node concept="10P55v" id="7Huivzrm24j" role="3g7fb8" />
+            <node concept="3b6qkQ" id="7Huivzrm2cx" role="3g7hyw">
+              <property role="$nhwW" value="1.1" />
+            </node>
+            <node concept="3b6qkQ" id="7Huivzrm2d6" role="3g7hyw">
+              <property role="$nhwW" value="0.1" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="FWJLR" id="7HuivzrlznH" role="l9eUl">
+        <ref role="FWJLQ" node="7HuivzriEHM" resolve="pos" />
+      </node>
+      <node concept="FWJLR" id="7HuivzrlznI" role="l9eUl">
+        <ref role="FWJLQ" node="7HuivzriEHP" resolve="desired_vel" />
       </node>
     </node>
     <node concept="2WYcwU" id="5CpI4wBBSQe" role="3ttgI2">
@@ -845,6 +824,34 @@
             </node>
           </node>
         </node>
+      </node>
+    </node>
+  </node>
+  <node concept="2wom5B" id="7HuivzriEHL">
+    <property role="TrG5h" value="Robot" />
+    <node concept="3tteAj" id="7HuivzriEHY" role="3ttcQu">
+      <property role="TrG5h" value="joint_velocity_limits" />
+      <node concept="10Q1$e" id="7HuivzriEHZ" role="3ttcR6">
+        <node concept="10P55v" id="7HuivzriEI0" role="10Q1$1" />
+      </node>
+    </node>
+    <node concept="3tteAj" id="7HuivzriEI1" role="3ttcQu">
+      <property role="TrG5h" value="initial_position" />
+      <node concept="10Q1$e" id="7HuivzriEI2" role="3ttcR6">
+        <node concept="10P55v" id="7HuivzriEI3" role="10Q1$1" />
+      </node>
+    </node>
+    <node concept="3tteAs" id="7HuivzriEHM" role="3ttcQl">
+      <property role="1T6LxX" value="378Eyp8OV9o/Output" />
+      <property role="TrG5h" value="pos" />
+      <node concept="10Q1$e" id="7HuivzriEHN" role="17RAGi">
+        <node concept="10P55v" id="7HuivzriEHO" role="10Q1$1" />
+      </node>
+    </node>
+    <node concept="3tteA$" id="7HuivzriEHP" role="3ttcQl">
+      <property role="TrG5h" value="desired_vel" />
+      <node concept="10Q1$e" id="7HuivzriEHQ" role="17RAGi">
+        <node concept="10P55v" id="7HuivzriEHR" role="10Q1$1" />
       </node>
     </node>
   </node>
