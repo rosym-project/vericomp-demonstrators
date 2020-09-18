@@ -85,6 +85,7 @@
     </language>
     <language id="17ce8e5a-8510-4af6-a493-490e056b4626" name="ComponentBehavior">
       <concept id="5130055757462274828" name="ComponentBehavior.structure.AlgorithmBehavior" flags="ng" index="2UjhQb">
+        <reference id="1675187024461162227" name="schedule" index="MpDda" />
         <reference id="5130055757462275089" name="algorithm" index="2UjhEm" />
         <child id="5130055757462401505" name="portMap" index="2UjYXA" />
       </concept>
@@ -214,6 +215,7 @@
     <node concept="2Uju8J" id="5CpI4wBCxp6" role="2WWV5w">
       <node concept="2UjhQb" id="5CpI4wBCxpa" role="2UjhNr">
         <ref role="2UjhEm" node="5CpI4wBCx6O" resolve="ControllerStep" />
+        <ref role="MpDda" node="2MDCTbSNCr9" resolve="loop" />
         <node concept="2UjYXs" id="5CpI4wBFMuB" role="2UjYXA">
           <ref role="2UjYXr" node="5CpI4wBBSNH" resolve="commanded_vel" />
           <ref role="2UjYXp" node="5CpI4wBCx7w" resolve="commanded_vel" />
