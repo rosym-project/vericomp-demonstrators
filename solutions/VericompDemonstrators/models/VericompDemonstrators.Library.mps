@@ -472,9 +472,9 @@
     </node>
   </node>
   <node concept="2$3l2Q" id="1E4V7_ZwuJR">
-    <property role="TrG5h" value="SweepScheduleLib" />
+    <property role="TrG5h" value="SolverScheduleLib" />
     <node concept="spAc0" id="1E4V7_ZwuLS" role="2$cYEw">
-      <property role="TrG5h" value="outward_sweep_sched" />
+      <property role="TrG5h" value="OutwardSweepSched" />
       <node concept="1OHxBU" id="1E4V7_ZwuMo" role="1prWzT">
         <property role="TrG5h" value="has_next" />
         <property role="1OHxBQ" value="6po$YwiVCCm/In" />
@@ -488,7 +488,10 @@
           <ref role="1e5Z7f" node="1E4V7_ZwuMo" resolve="has_next" />
           <node concept="2qD35c" id="1E4V7_ZwuMW" role="1e5Z71">
             <node concept="1e5Z75" id="1E4V7_ZwuN4" role="2qD3aK">
-              <ref role="LPJVy" node="1E4V7_ZwuMZ" resolve="process_segment" />
+              <ref role="LPJVy" node="1E4V7_ZwuMZ" resolve="fpk" />
+            </node>
+            <node concept="1e5Z75" id="1E4V7_ZwuUy" role="2qD3aK">
+              <ref role="LPJVy" node="1E4V7_ZwuUo" resolve="fvk" />
             </node>
             <node concept="1e5Z75" id="1E4V7_ZwuN9" role="2qD3aK">
               <ref role="LPJVy" node="1E4V7_ZwuMD" resolve="next" />
@@ -505,7 +508,11 @@
         <property role="2_BrWT" value="3EtQu_uj5i/Out" />
       </node>
       <node concept="1pt3V6" id="1E4V7_ZwuMZ" role="1OHzVH">
-        <property role="TrG5h" value="process_segment" />
+        <property role="TrG5h" value="fpk" />
+        <property role="2_BrWT" value="3EtQu_uj5i/Out" />
+      </node>
+      <node concept="1pt3V6" id="1E4V7_ZwuUo" role="1OHzVH">
+        <property role="TrG5h" value="fvk" />
         <property role="2_BrWT" value="3EtQu_uj5i/Out" />
       </node>
       <node concept="1pt3V6" id="1E4V7_ZwuMD" role="1OHzVH">
@@ -514,23 +521,30 @@
       </node>
     </node>
     <node concept="2__D7_" id="1E4V7_ZwuJU" role="2$cYEw">
-      <property role="TrG5h" value="fpk_segment_sched" />
+      <property role="TrG5h" value="ForwardPositionKinematicsSched" />
       <node concept="2_qZNI" id="1E4V7_ZwuKg" role="2__D7$">
-        <ref role="2_qZNH" node="1E4V7_ZwuJZ" resolve="joint_fpk" />
+        <ref role="2_qZNH" node="1E4V7_ZwuJZ" resolve="fpk" />
       </node>
       <node concept="2_qZNI" id="1E4V7_ZwuKm" role="2__D7$">
         <ref role="2_qZNH" node="1E4V7_ZwuK2" resolve="compose" />
+      </node>
+      <node concept="2_qZNI" id="1E4V7_ZwuPN" role="2__D7$">
+        <ref role="2_qZNH" node="1E4V7_ZwuPE" resolve="accumulate" />
       </node>
       <node concept="1pt3V6" id="1E4V7_ZwuK6" role="1OHzVH">
         <property role="TrG5h" value="trigger" />
         <property role="2_BrWT" value="3EtQu_uj5h/In" />
       </node>
       <node concept="1pt3V6" id="1E4V7_ZwuJZ" role="1OHzVH">
-        <property role="TrG5h" value="joint_fpk" />
+        <property role="TrG5h" value="fpk" />
         <property role="2_BrWT" value="3EtQu_uj5i/Out" />
       </node>
       <node concept="1pt3V6" id="1E4V7_ZwuK2" role="1OHzVH">
         <property role="TrG5h" value="compose" />
+        <property role="2_BrWT" value="3EtQu_uj5i/Out" />
+      </node>
+      <node concept="1pt3V6" id="1E4V7_ZwuPE" role="1OHzVH">
+        <property role="TrG5h" value="accumulate" />
         <property role="2_BrWT" value="3EtQu_uj5i/Out" />
       </node>
     </node>

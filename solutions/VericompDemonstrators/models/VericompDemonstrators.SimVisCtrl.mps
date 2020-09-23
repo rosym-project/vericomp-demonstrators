@@ -500,12 +500,42 @@
         <ref role="2mI24v" node="1E4V7_ZwuDy" resolve="x_link" />
       </node>
     </node>
-    <node concept="1OHxBB" id="1E4V7_ZwuHZ" role="2pAz8s">
-      <node concept="2cu7QH" id="1E4V7_ZwuI0" role="2dHiq2">
+    <node concept="1OHxBB" id="1E4V7_ZwuQU" role="2pAz8s">
+      <node concept="2cu7QH" id="1E4V7_ZwuQV" role="2dHiq2">
         <ref role="2cu7Qi" node="1E4V7_ZwuBb" resolve="compose" />
         <ref role="2mI24v" to="s8z2:7gRMHh5x7md" resolve="r" />
       </node>
-      <node concept="2cu7QH" id="1E4V7_ZwuI1" role="2dHiq0">
+      <node concept="2cu7QH" id="1E4V7_ZwuQW" role="2dHiq0">
+        <ref role="2cu7Qi" node="1E4V7_ZwuQs" resolve="x_rel" />
+        <ref role="2mI24v" node="1E4V7_ZwuQs" resolve="x_rel" />
+      </node>
+    </node>
+    <node concept="1OHxBB" id="1E4V7_ZwuTp" role="2pAz8s">
+      <node concept="2cu7QH" id="1E4V7_ZwuTq" role="2dHiq2">
+        <ref role="2cu7Qi" node="1E4V7_ZwuQn" resolve="accumulate" />
+        <ref role="2mI24v" to="s8z2:7gRMHh5x7lJ" resolve="p1" />
+      </node>
+      <node concept="2cu7QH" id="1E4V7_ZwuTr" role="2dHiq0">
+        <ref role="2cu7Qi" node="1E4V7_ZwuSw" resolve="x_tot_prev" />
+        <ref role="2mI24v" node="1E4V7_ZwuSw" resolve="x_tot_prev" />
+      </node>
+    </node>
+    <node concept="1OHxBB" id="1E4V7_ZwuS2" role="2pAz8s">
+      <node concept="2cu7QH" id="1E4V7_ZwuS3" role="2dHiq2">
+        <ref role="2cu7Qi" node="1E4V7_ZwuQn" resolve="accumulate" />
+        <ref role="2mI24v" to="s8z2:7gRMHh5x7lW" resolve="p2" />
+      </node>
+      <node concept="2cu7QH" id="1E4V7_ZwuS4" role="2dHiq0">
+        <ref role="2cu7Qi" node="1E4V7_ZwuQs" resolve="x_rel" />
+        <ref role="2mI24v" node="1E4V7_ZwuQs" resolve="x_rel" />
+      </node>
+    </node>
+    <node concept="1OHxBB" id="1E4V7_ZwuTR" role="2pAz8s">
+      <node concept="2cu7QH" id="1E4V7_ZwuTS" role="2dHiq2">
+        <ref role="2cu7Qi" node="1E4V7_ZwuQn" resolve="accumulate" />
+        <ref role="2mI24v" to="s8z2:7gRMHh5x7md" resolve="r" />
+      </node>
+      <node concept="2cu7QH" id="1E4V7_ZwuTT" role="2dHiq0">
         <ref role="2cu7Qi" node="1E4V7_ZwuGw" resolve="x_tot" />
         <ref role="2mI24v" node="1E4V7_ZwuGw" resolve="x_tot" />
       </node>
@@ -517,6 +547,14 @@
     <node concept="vjVuy" id="1E4V7_ZwuDy" role="2pAz8u">
       <property role="TrG5h" value="x_link" />
       <node concept="70UUS" id="1E4V7_ZwuDF" role="1tU5fm" />
+    </node>
+    <node concept="vjVuy" id="1E4V7_ZwuQs" role="2pAz8u">
+      <property role="TrG5h" value="x_rel" />
+      <node concept="70UUS" id="1E4V7_ZwuQJ" role="1tU5fm" />
+    </node>
+    <node concept="vjVuy" id="1E4V7_ZwuSw" role="2pAz8u">
+      <property role="TrG5h" value="x_tot_prev" />
+      <node concept="70UUS" id="1E4V7_ZwuSP" role="1tU5fm" />
     </node>
     <node concept="vjVuy" id="1E4V7_ZwuGw" role="2pAz8u">
       <property role="TrG5h" value="x_tot" />
@@ -532,18 +570,22 @@
       <property role="TrG5h" value="compose" />
       <ref role="2PtgrV" to="s8z2:7gRMHh5x7lF" resolve="ComposePose" />
     </node>
+    <node concept="2Ptgr7" id="1E4V7_ZwuQn" role="2pAz8v">
+      <property role="TrG5h" value="accumulate" />
+      <ref role="2PtgrV" to="s8z2:7gRMHh5x7lF" resolve="ComposePose" />
+    </node>
     <node concept="2Ptgr7" id="1E4V7_ZwuDu" role="2pAz8v">
       <property role="TrG5h" value="fpk" />
       <ref role="2PtgrV" to="s8z2:1E4V7_ZwuCe" resolve="JointFPK" />
     </node>
     <node concept="2$bkLk" id="1E4V7_ZwuKq" role="2pAz8t">
       <property role="TrG5h" value="fpk" />
-      <ref role="2$bkLg" to="s8z2:1E4V7_ZwuJU" resolve="fpk_sched" />
+      <ref role="2$bkLg" to="s8z2:1E4V7_ZwuJU" resolve="ForwardPositionKinematicsSched" />
     </node>
     <node concept="1psEHa" id="1E4V7_ZwuKy" role="2pAz8r">
       <node concept="2dP7qM" id="1E4V7_ZwuKz" role="2dHiq2">
         <ref role="2cu7Qi" node="1E4V7_ZwuKq" resolve="fpk" />
-        <ref role="2mI24v" to="s8z2:1E4V7_ZwuJZ" resolve="joint_fpk" />
+        <ref role="2mI24v" to="s8z2:1E4V7_ZwuJZ" resolve="fpk" />
       </node>
       <node concept="2dP7qM" id="1E4V7_ZwuK$" role="2dHiq0">
         <ref role="2cu7Qi" node="1E4V7_ZwuDu" resolve="fpk" />
@@ -557,6 +599,16 @@
       </node>
       <node concept="2dP7qM" id="1E4V7_ZwuKE" role="2dHiq0">
         <ref role="2cu7Qi" node="1E4V7_ZwuBb" resolve="compose" />
+        <ref role="2mI24v" to="s8z2:7gRMHh5x7lG" resolve="run" />
+      </node>
+    </node>
+    <node concept="1psEHa" id="1E4V7_ZwuUB" role="2pAz8r">
+      <node concept="2dP7qM" id="1E4V7_ZwuUC" role="2dHiq2">
+        <ref role="2cu7Qi" node="1E4V7_ZwuKq" resolve="fpk" />
+        <ref role="2mI24v" to="s8z2:1E4V7_ZwuPE" resolve="accumulate" />
+      </node>
+      <node concept="2dP7qM" id="1E4V7_ZwuUD" role="2dHiq0">
+        <ref role="2cu7Qi" node="1E4V7_ZwuQn" resolve="accumulate" />
         <ref role="2mI24v" to="s8z2:7gRMHh5x7lG" resolve="run" />
       </node>
     </node>
