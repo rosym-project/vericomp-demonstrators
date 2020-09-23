@@ -3,12 +3,15 @@
   <persistence version="9" />
   <languages>
     <use id="a8f70f9e-ef01-499f-885c-c79273fa1695" name="Algorithm" version="0" />
+    <use id="88e31b22-f7a1-4ed1-a668-9711cad402e2" name="Geometry" version="0" />
+    <use id="3459f9c4-b876-4b39-b656-59424a2a8ae3" name="KinematicChains_Algorithm" version="0" />
   </languages>
   <imports />
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
       <concept id="1070534370425" name="jetbrains.mps.baseLanguage.structure.IntegerType" flags="in" index="10Oyi0" />
       <concept id="1070534513062" name="jetbrains.mps.baseLanguage.structure.DoubleType" flags="in" index="10P55v" />
+      <concept id="1070534644030" name="jetbrains.mps.baseLanguage.structure.BooleanType" flags="in" index="10P_77" />
       <concept id="1070534760951" name="jetbrains.mps.baseLanguage.structure.ArrayType" flags="in" index="10Q1$e">
         <child id="1070534760952" name="componentType" index="10Q1$1" />
       </concept>
@@ -16,8 +19,18 @@
         <child id="5680397130376446158" name="type" index="1tU5fm" />
       </concept>
     </language>
+    <language id="88e31b22-f7a1-4ed1-a668-9711cad402e2" name="Geometry">
+      <concept id="2233680562575117851" name="Geometry.structure.AffineTransformationType" flags="ig" index="70UUS" />
+    </language>
     <language id="a8f70f9e-ef01-499f-885c-c79273fa1695" name="Algorithm">
+      <concept id="8431561705660014078" name="Algorithm.structure.ScheduleStatementList" flags="ng" index="2qD35c">
+        <child id="8431561705660014082" name="statements" index="2qD3aK" />
+      </concept>
+      <concept id="349167071914761882" name="Algorithm.structure.StatementBasedSchedulerBlock" flags="ng" index="spAc0">
+        <child id="8213653556241840446" name="schedule" index="1e5ZHq" />
+      </concept>
       <concept id="2483553733153713493" name="Algorithm.structure.SchedulerBlock" flags="ng" index="vjVuz">
+        <child id="7268768516385280653" name="data_ports" index="1prWzT" />
         <child id="7374807014778514693" name="trigger_ports" index="1OHzVH" />
       </concept>
       <concept id="2077603528172925392" name="Algorithm.structure.Library" flags="ng" index="2$3l2Q">
@@ -41,6 +54,13 @@
         <child id="3725923812855012107" name="trigger_port" index="2YOnzW" />
         <child id="3725923812855012104" name="data_ports" index="2YOnzZ" />
       </concept>
+      <concept id="8213653556241839012" name="Algorithm.structure.WhileDoStatement" flags="ng" index="1e5Z70">
+        <reference id="8213653556241839019" name="condition" index="1e5Z7f" />
+        <child id="8213653556241839013" name="body" index="1e5Z71" />
+      </concept>
+      <concept id="8213653556241839009" name="Algorithm.structure.TriggerStatement" flags="ng" index="1e5Z75">
+        <reference id="8213653556245970054" name="trigger" index="LPJVy" />
+      </concept>
       <concept id="7268768516385006770" name="Algorithm.structure.TriggerPort" flags="ng" index="1pt3V6">
         <property id="65996431591721054" name="direction" index="2_BrWT" />
       </concept>
@@ -52,6 +72,10 @@
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
       </concept>
+    </language>
+    <language id="3459f9c4-b876-4b39-b656-59424a2a8ae3" name="KinematicChains_Algorithm">
+      <concept id="3772408315660851476" name="KinematicChains_Algorithm.structure.JointPosition" flags="ig" index="1QUT1O" />
+      <concept id="3772408315660850613" name="KinematicChains_Algorithm.structure.Joint" flags="ig" index="1QUTNl" />
     </language>
   </registry>
   <node concept="2$3l2Q" id="1m4TMuc7H7N">
@@ -388,6 +412,125 @@
       </node>
       <node concept="1pt3V6" id="4P16e60b9b3" role="1OHzVH">
         <property role="TrG5h" value="derivative" />
+        <property role="2_BrWT" value="3EtQu_uj5i/Out" />
+      </node>
+    </node>
+  </node>
+  <node concept="2$3l2Q" id="5GTDeybkM7A">
+    <property role="TrG5h" value="Dyn2bLib" />
+    <node concept="G13Fa" id="7gRMHh5x7lF" role="2PtZiJ">
+      <property role="TrG5h" value="ComposePose" />
+      <property role="G13F9" value="dyn2b" />
+      <property role="1h6pOq" value="gc_pose_compose" />
+      <property role="2p$X_u" value="gc_pose_compose_nbx" />
+      <property role="G13FQ" value="dyn2b.functions.geometry" />
+      <node concept="1OHxBU" id="7gRMHh5x7lJ" role="2YOnzZ">
+        <property role="TrG5h" value="p1" />
+        <property role="1OHxBQ" value="6po$YwiVCCm/In" />
+        <node concept="70UUS" id="5GTDeybeaN6" role="1tU5fm" />
+      </node>
+      <node concept="1OHxBU" id="7gRMHh5x7lW" role="2YOnzZ">
+        <property role="TrG5h" value="p2" />
+        <property role="1OHxBQ" value="6po$YwiVCCm/In" />
+        <node concept="70UUS" id="5GTDeybeaNb" role="1tU5fm" />
+      </node>
+      <node concept="1OHxBU" id="7gRMHh5x7md" role="2YOnzZ">
+        <property role="TrG5h" value="r" />
+        <property role="1OHxBQ" value="6po$YwiVCCn/Out" />
+        <node concept="70UUS" id="5GTDeybeaNg" role="1tU5fm" />
+      </node>
+      <node concept="1pt3V6" id="7gRMHh5x7lG" role="2YOnzW">
+        <property role="TrG5h" value="run" />
+        <property role="2_BrWT" value="3EtQu_uj5h/In" />
+      </node>
+    </node>
+    <node concept="G13Fa" id="1E4V7_ZwuCe" role="2PtZiJ">
+      <property role="TrG5h" value="JointFPK" />
+      <property role="G13F9" value="dyn2b" />
+      <property role="G13FQ" value="dyn2b.functions.kinematic_chain" />
+      <property role="1h6pOq" value="rev_fpk" />
+      <property role="2p$X_u" value="ref_fpk_nbx" />
+      <node concept="1pt3V6" id="1E4V7_ZwuCh" role="2YOnzW">
+        <property role="TrG5h" value="trigger" />
+        <property role="2_BrWT" value="3EtQu_uj5h/In" />
+      </node>
+      <node concept="1OHxBU" id="1E4V7_ZwuCu" role="2YOnzZ">
+        <property role="TrG5h" value="joint" />
+        <property role="1OHxBQ" value="6po$YwiVCCm/In" />
+        <node concept="1QUTNl" id="1E4V7_ZwuCA" role="1tU5fm" />
+      </node>
+      <node concept="1OHxBU" id="1E4V7_ZwuCH" role="2YOnzZ">
+        <property role="TrG5h" value="q" />
+        <property role="1OHxBQ" value="6po$YwiVCCm/In" />
+        <node concept="1QUT1O" id="1E4V7_ZwuCR" role="1tU5fm" />
+      </node>
+      <node concept="1OHxBU" id="1E4V7_ZwuCY" role="2YOnzZ">
+        <property role="TrG5h" value="x" />
+        <property role="1OHxBQ" value="6po$YwiVCCn/Out" />
+        <node concept="70UUS" id="1E4V7_ZwuDa" role="1tU5fm" />
+      </node>
+    </node>
+  </node>
+  <node concept="2$3l2Q" id="1E4V7_ZwuJR">
+    <property role="TrG5h" value="SweepScheduleLib" />
+    <node concept="spAc0" id="1E4V7_ZwuLS" role="2$cYEw">
+      <property role="TrG5h" value="outward_sweep_sched" />
+      <node concept="1OHxBU" id="1E4V7_ZwuMo" role="1prWzT">
+        <property role="TrG5h" value="has_next" />
+        <property role="1OHxBQ" value="6po$YwiVCCm/In" />
+        <node concept="10P_77" id="1E4V7_ZwuMp" role="1tU5fm" />
+      </node>
+      <node concept="2qD35c" id="1E4V7_ZwuMH" role="1e5ZHq">
+        <node concept="1e5Z75" id="1E4V7_ZwuMK" role="2qD3aK">
+          <ref role="LPJVy" node="1E4V7_ZwuMA" resolve="reset" />
+        </node>
+        <node concept="1e5Z70" id="1E4V7_ZwuMP" role="2qD3aK">
+          <ref role="1e5Z7f" node="1E4V7_ZwuMo" resolve="has_next" />
+          <node concept="2qD35c" id="1E4V7_ZwuMW" role="1e5Z71">
+            <node concept="1e5Z75" id="1E4V7_ZwuN4" role="2qD3aK">
+              <ref role="LPJVy" node="1E4V7_ZwuMZ" resolve="process_segment" />
+            </node>
+            <node concept="1e5Z75" id="1E4V7_ZwuN9" role="2qD3aK">
+              <ref role="LPJVy" node="1E4V7_ZwuMD" resolve="next" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1pt3V6" id="1E4V7_ZwuM$" role="1OHzVH">
+        <property role="TrG5h" value="trigger" />
+        <property role="2_BrWT" value="3EtQu_uj5h/In" />
+      </node>
+      <node concept="1pt3V6" id="1E4V7_ZwuMA" role="1OHzVH">
+        <property role="TrG5h" value="reset" />
+        <property role="2_BrWT" value="3EtQu_uj5i/Out" />
+      </node>
+      <node concept="1pt3V6" id="1E4V7_ZwuMZ" role="1OHzVH">
+        <property role="TrG5h" value="process_segment" />
+        <property role="2_BrWT" value="3EtQu_uj5i/Out" />
+      </node>
+      <node concept="1pt3V6" id="1E4V7_ZwuMD" role="1OHzVH">
+        <property role="TrG5h" value="next" />
+        <property role="2_BrWT" value="3EtQu_uj5i/Out" />
+      </node>
+    </node>
+    <node concept="2__D7_" id="1E4V7_ZwuJU" role="2$cYEw">
+      <property role="TrG5h" value="fpk_segment_sched" />
+      <node concept="2_qZNI" id="1E4V7_ZwuKg" role="2__D7$">
+        <ref role="2_qZNH" node="1E4V7_ZwuJZ" resolve="joint_fpk" />
+      </node>
+      <node concept="2_qZNI" id="1E4V7_ZwuKm" role="2__D7$">
+        <ref role="2_qZNH" node="1E4V7_ZwuK2" resolve="compose" />
+      </node>
+      <node concept="1pt3V6" id="1E4V7_ZwuK6" role="1OHzVH">
+        <property role="TrG5h" value="trigger" />
+        <property role="2_BrWT" value="3EtQu_uj5h/In" />
+      </node>
+      <node concept="1pt3V6" id="1E4V7_ZwuJZ" role="1OHzVH">
+        <property role="TrG5h" value="joint_fpk" />
+        <property role="2_BrWT" value="3EtQu_uj5i/Out" />
+      </node>
+      <node concept="1pt3V6" id="1E4V7_ZwuK2" role="1OHzVH">
+        <property role="TrG5h" value="compose" />
         <property role="2_BrWT" value="3EtQu_uj5i/Out" />
       </node>
     </node>

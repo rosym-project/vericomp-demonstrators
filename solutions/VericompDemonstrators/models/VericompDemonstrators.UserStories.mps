@@ -19,9 +19,6 @@
         <child id="5680397130376446158" name="type" index="1tU5fm" />
       </concept>
     </language>
-    <language id="88e31b22-f7a1-4ed1-a668-9711cad402e2" name="Geometry">
-      <concept id="2233680562575117851" name="Geometry.structure.AffineTransformationType" flags="ig" index="70UUS" />
-    </language>
     <language id="a8f70f9e-ef01-499f-885c-c79273fa1695" name="Algorithm">
       <concept id="1292841379851053318" name="Algorithm.structure.AlgorithmBlockInst" flags="ng" index="2d0V5$">
         <reference id="1292841379851053319" name="type" index="2d0V5_" />
@@ -460,35 +457,6 @@
       </node>
       <node concept="1pt3V6" id="1xeT5BWlNjn" role="2YOnzW">
         <property role="TrG5h" value="trig" />
-        <property role="2_BrWT" value="3EtQu_uj5h/In" />
-      </node>
-    </node>
-  </node>
-  <node concept="2$3l2Q" id="5GTDeybkM7A">
-    <property role="TrG5h" value="Dyn2bLib" />
-    <node concept="G13Fa" id="7gRMHh5x7lF" role="2PtZiJ">
-      <property role="TrG5h" value="pose_compose" />
-      <property role="G13F9" value="dyn2b" />
-      <property role="1h6pOq" value="gc_pose_compose" />
-      <property role="2p$X_u" value="gc_pose_compose_nbx" />
-      <property role="G13FQ" value="dyn2b.functions.geometry" />
-      <node concept="1OHxBU" id="7gRMHh5x7lJ" role="2YOnzZ">
-        <property role="TrG5h" value="p1" />
-        <property role="1OHxBQ" value="6po$YwiVCCm/In" />
-        <node concept="70UUS" id="5GTDeybeaN6" role="1tU5fm" />
-      </node>
-      <node concept="1OHxBU" id="7gRMHh5x7lW" role="2YOnzZ">
-        <property role="TrG5h" value="p2" />
-        <property role="1OHxBQ" value="6po$YwiVCCm/In" />
-        <node concept="70UUS" id="5GTDeybeaNb" role="1tU5fm" />
-      </node>
-      <node concept="1OHxBU" id="7gRMHh5x7md" role="2YOnzZ">
-        <property role="TrG5h" value="r" />
-        <property role="1OHxBQ" value="6po$YwiVCCn/Out" />
-        <node concept="70UUS" id="5GTDeybeaNg" role="1tU5fm" />
-      </node>
-      <node concept="1pt3V6" id="7gRMHh5x7lG" role="2YOnzW">
-        <property role="TrG5h" value="run" />
         <property role="2_BrWT" value="3EtQu_uj5h/In" />
       </node>
     </node>
