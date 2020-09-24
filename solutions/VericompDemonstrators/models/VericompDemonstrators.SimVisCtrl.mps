@@ -194,7 +194,7 @@
       </concept>
     </language>
     <language id="3459f9c4-b876-4b39-b656-59424a2a8ae3" name="KinematicChains_Algorithm">
-      <concept id="8123181661285311979" name="KinematicChains_Algorithm.structure.KinematicChain" flags="ig" index="36mVd5">
+      <concept id="8123181661285311979" name="KinematicChains_Algorithm.structure.KinematicChain" flags="ng" index="36mVd5">
         <reference id="8151805743682279132" name="robot" index="1f2HVY" />
       </concept>
       <concept id="3772408315660851476" name="KinematicChains_Algorithm.structure.JointPosition" flags="ig" index="1QUT1O" />
@@ -1112,7 +1112,19 @@
         <ref role="MpDda" node="1E4V7_Zwupi" resolve="kin_ctrl" />
         <node concept="2UjYXs" id="2dauTz5XITN" role="2UjYXA">
           <ref role="2UjYXr" node="1E4V7_Zwur7" resolve="q_msr" />
-          <ref role="LIGQ2" node="2dauTz5XITb" resolve="test" />
+          <ref role="LIGQ2" node="7gRMHh5zZw4" resolve="msr" />
+        </node>
+        <node concept="2UjYXs" id="53CmqhFLVI2" role="2UjYXA">
+          <ref role="2UjYXr" node="1E4V7_Zwurr" resolve="qd_cmd" />
+          <ref role="LIGQ2" node="4P16e60b97o" resolve="out" />
+        </node>
+        <node concept="2UjYXs" id="53CmqhFLVIm" role="2UjYXA">
+          <ref role="2UjYXr" node="1E4V7_ZwurP" resolve="x_tot" />
+          <ref role="LIGQ2" node="7gRMHh5x7lg" resolve="x_tot_arr" />
+        </node>
+        <node concept="1XHb3G" id="53CmqhFLVIG" role="2UjYXA">
+          <ref role="1XHb3H" node="1E4V7_Zwutw" resolve="gains" />
+          <ref role="LIGQ2" node="5GTDeybeaPO" resolve="gains" />
         </node>
       </node>
     </node>
