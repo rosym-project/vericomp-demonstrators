@@ -13,6 +13,7 @@
     <dependency reexport="false">9356c85b-d8d9-4f77-a6c3-7a0852b5bf29(Controller)</dependency>
     <dependency reexport="false">a5949a30-34e6-4033-823a-25cc66135ce1(Microblx)</dependency>
     <dependency reexport="false">88e31b22-f7a1-4ed1-a668-9711cad402e2(Geometry)</dependency>
+    <dependency reexport="false">3459f9c4-b876-4b39-b656-59424a2a8ae3(KinematicChains_Algorithm)</dependency>
   </dependencies>
   <languageVersions>
     <language slang="l:a8f70f9e-ef01-499f-885c-c79273fa1695:Algorithm" version="0" />
@@ -23,6 +24,7 @@
     <language slang="l:9356c85b-d8d9-4f77-a6c3-7a0852b5bf29:Controller" version="0" />
     <language slang="l:88e31b22-f7a1-4ed1-a668-9711cad402e2:Geometry" version="0" />
     <language slang="l:3bb73e68-12bc-4a5e-9c28-2bb221bc3095:Geometry_Algorithm" version="0" />
+    <language slang="l:d6881f78-a85d-4c9e-931e-30879e67afdd:KinematicChains" version="3" />
     <language slang="l:3459f9c4-b876-4b39-b656-59424a2a8ae3:KinematicChains_Algorithm" version="0" />
     <language slang="l:a5949a30-34e6-4033-823a-25cc66135ce1:Microblx" version="0" />
     <language slang="l:14d6bc92-051d-4467-84c8-9af7439a864f:Orocos" version="0" />
@@ -37,6 +39,7 @@
     <module reference="9356c85b-d8d9-4f77-a6c3-7a0852b5bf29(Controller)" version="0" />
     <module reference="88e31b22-f7a1-4ed1-a668-9711cad402e2(Geometry)" version="0" />
     <module reference="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" version="0" />
+    <module reference="3459f9c4-b876-4b39-b656-59424a2a8ae3(KinematicChains_Algorithm)" version="0" />
     <module reference="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" version="0" />
     <module reference="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" version="0" />
     <module reference="a5949a30-34e6-4033-823a-25cc66135ce1(Microblx)" version="0" />

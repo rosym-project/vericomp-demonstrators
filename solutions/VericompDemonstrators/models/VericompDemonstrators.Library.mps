@@ -23,6 +23,7 @@
       <concept id="2233680562575117851" name="Geometry.structure.AffineTransformationType" flags="ig" index="70UUS" />
     </language>
     <language id="a8f70f9e-ef01-499f-885c-c79273fa1695" name="Algorithm">
+      <concept id="774599295535771616" name="Algorithm.structure.ArrayAccess" flags="ng" index="274C8k" />
       <concept id="8431561705660014078" name="Algorithm.structure.ScheduleStatementList" flags="ng" index="2qD35c">
         <child id="8431561705660014082" name="statements" index="2qD3aK" />
       </concept>
@@ -486,17 +487,11 @@
         <node concept="10P_77" id="1E4V7_ZwuMp" role="1tU5fm" />
       </node>
       <node concept="2qD35c" id="1E4V7_ZwuMH" role="1e5ZHq">
-        <node concept="1e5Z75" id="1E4V7_ZwuMK" role="2qD3aK">
-          <ref role="LPJVy" node="1E4V7_ZwuMA" resolve="reset" />
-        </node>
         <node concept="1e5Z70" id="1E4V7_ZwuMP" role="2qD3aK">
           <ref role="1e5Z7f" node="1E4V7_ZwuMo" resolve="has_next" />
           <node concept="2qD35c" id="1E4V7_ZwuMW" role="1e5Z71">
             <node concept="1e5Z75" id="1E4V7_ZwuN4" role="2qD3aK">
               <ref role="LPJVy" node="1E4V7_ZwuMZ" resolve="fpk" />
-            </node>
-            <node concept="1e5Z75" id="1E4V7_ZwuUy" role="2qD3aK">
-              <ref role="LPJVy" node="1E4V7_ZwuUo" resolve="fvk" />
             </node>
             <node concept="1e5Z75" id="1E4V7_ZwuN9" role="2qD3aK">
               <ref role="LPJVy" node="1E4V7_ZwuMD" resolve="next" />
@@ -508,16 +503,8 @@
         <property role="TrG5h" value="trigger" />
         <property role="2_BrWT" value="3EtQu_uj5h/In" />
       </node>
-      <node concept="1pt3V6" id="1E4V7_ZwuMA" role="1OHzVH">
-        <property role="TrG5h" value="reset" />
-        <property role="2_BrWT" value="3EtQu_uj5i/Out" />
-      </node>
       <node concept="1pt3V6" id="1E4V7_ZwuMZ" role="1OHzVH">
         <property role="TrG5h" value="fpk" />
-        <property role="2_BrWT" value="3EtQu_uj5i/Out" />
-      </node>
-      <node concept="1pt3V6" id="1E4V7_ZwuUo" role="1OHzVH">
-        <property role="TrG5h" value="fvk" />
         <property role="2_BrWT" value="3EtQu_uj5i/Out" />
       </node>
       <node concept="1pt3V6" id="1E4V7_ZwuMD" role="1OHzVH">
@@ -551,6 +538,35 @@
       <node concept="1pt3V6" id="1E4V7_ZwuPE" role="1OHzVH">
         <property role="TrG5h" value="accumulate" />
         <property role="2_BrWT" value="3EtQu_uj5i/Out" />
+      </node>
+    </node>
+  </node>
+  <node concept="2$3l2Q" id="2dauTz5XHQb">
+    <property role="TrG5h" value="ArrayAccess" />
+    <node concept="274C8k" id="2dauTz5XHQc" role="2PtZiJ">
+      <property role="TrG5h" value="AffineTransformAccess" />
+      <node concept="1OHxBU" id="2dauTz5XHQd" role="2YOnzZ">
+        <property role="TrG5h" value="array_access" />
+        <property role="1OHxBQ" value="6po$YwiVCCm/In" />
+        <node concept="10Q1$e" id="2dauTz5XHQe" role="1tU5fm">
+          <node concept="70UUS" id="2dauTz5XHQy" role="10Q1$1" />
+        </node>
+      </node>
+      <node concept="1OHxBU" id="2dauTz5XHQf" role="2YOnzZ">
+        <property role="TrG5h" value="index" />
+        <property role="1OHxBQ" value="6po$YwiVCCm/In" />
+        <node concept="10Oyi0" id="2dauTz5XHQg" role="1tU5fm" />
+      </node>
+      <node concept="1OHxBU" id="2dauTz5XHQh" role="2YOnzZ">
+        <property role="TrG5h" value="access" />
+        <property role="1OHxBQ" value="6po$YwiVCCq/InOut" />
+        <node concept="1j8hun" id="2dauTz5XHQi" role="1tU5fm">
+          <node concept="70UUS" id="2dauTz5XHQE" role="1j8huj" />
+        </node>
+      </node>
+      <node concept="1pt3V6" id="2dauTz5XHQj" role="2YOnzW">
+        <property role="TrG5h" value="trigger" />
+        <property role="2_BrWT" value="3EtQu_uj5h/In" />
       </node>
     </node>
   </node>
