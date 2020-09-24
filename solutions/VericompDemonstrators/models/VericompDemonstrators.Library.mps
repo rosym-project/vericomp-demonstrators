@@ -62,9 +62,6 @@
       <concept id="8213653556241839009" name="Algorithm.structure.TriggerStatement" flags="ng" index="1e5Z75">
         <reference id="8213653556245970054" name="trigger" index="LPJVy" />
       </concept>
-      <concept id="8661093765501646195" name="Algorithm.structure.ReferenceType" flags="ig" index="1j8hun">
-        <child id="8661093765501646199" name="componentType" index="1j8huj" />
-      </concept>
       <concept id="7268768516385006770" name="Algorithm.structure.TriggerPort" flags="ng" index="1pt3V6">
         <property id="65996431591721054" name="direction" index="2_BrWT" />
       </concept>
@@ -567,9 +564,7 @@
       <node concept="1OHxBU" id="2dauTz5XHQh" role="2YOnzZ">
         <property role="TrG5h" value="access" />
         <property role="1OHxBQ" value="6po$YwiVCCq/InOut" />
-        <node concept="1j8hun" id="2dauTz5XHQi" role="1tU5fm">
-          <node concept="70UUS" id="2dauTz5XHQE" role="1j8huj" />
-        </node>
+        <node concept="70UUS" id="4g2eXcptFlt" role="1tU5fm" />
       </node>
       <node concept="1pt3V6" id="2dauTz5XHQj" role="2YOnzW">
         <property role="TrG5h" value="trigger" />
@@ -580,7 +575,10 @@
       <property role="TrG5h" value="JointAccess" />
       <node concept="1OHxBU" id="2dauTz5XLia" role="2YOnzZ">
         <property role="TrG5h" value="array_access" />
-        <node concept="10Q1$e" id="2dauTz5XLib" role="1tU5fm" />
+        <property role="1OHxBQ" value="6po$YwiVCCm/In" />
+        <node concept="10Q1$e" id="2dauTz5XLib" role="1tU5fm">
+          <node concept="1QUTNl" id="4g2eXcptFlF" role="10Q1$1" />
+        </node>
       </node>
       <node concept="1OHxBU" id="2dauTz5XLic" role="2YOnzZ">
         <property role="TrG5h" value="index" />
@@ -590,9 +588,12 @@
       <node concept="1OHxBU" id="2dauTz5XLie" role="2YOnzZ">
         <property role="TrG5h" value="access" />
         <property role="1OHxBQ" value="6po$YwiVCCq/InOut" />
-        <node concept="1j8hun" id="2dauTz5XLif" role="1tU5fm" />
+        <node concept="1QUTNl" id="4g2eXcptFlW" role="1tU5fm" />
       </node>
-      <node concept="1pt3V6" id="2dauTz5XLii" role="2YOnzW" />
+      <node concept="1pt3V6" id="2dauTz5XLii" role="2YOnzW">
+        <property role="TrG5h" value="trigger" />
+        <property role="2_BrWT" value="3EtQu_uj5h/In" />
+      </node>
     </node>
   </node>
 </model>

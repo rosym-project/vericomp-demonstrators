@@ -146,9 +146,6 @@
       <concept id="5195753005471121027" name="Algorithm.structure.IDataConnectorProvider" flags="ng" index="3fRjHn">
         <child id="1550618328762864955" name="closures" index="2pAz8s" />
       </concept>
-      <concept id="8661093765501646195" name="Algorithm.structure.ReferenceType" flags="ig" index="1j8hun">
-        <child id="8661093765501646199" name="componentType" index="1j8huj" />
-      </concept>
       <concept id="7268768516385108286" name="Algorithm.structure.TriggerConnector" flags="ng" index="1psEHa" />
       <concept id="7268768516385006770" name="Algorithm.structure.TriggerPort" flags="ng" index="1pt3V6">
         <property id="65996431591721054" name="direction" index="2_BrWT" />
@@ -164,6 +161,7 @@
       </concept>
       <concept id="6358669349290676739" name="Controller.structure.SignedPort" flags="ng" index="SB1Cm">
         <property id="6358669349290676742" name="sign" index="SB1Cj" />
+        <reference id="6358669349290676740" name="port" index="SB1Ch" />
       </concept>
       <concept id="6062623272280885151" name="Controller.structure.Gain" flags="ng" index="3zsOgx" />
     </language>
@@ -502,9 +500,7 @@
       <node concept="1OHxBU" id="5GTDeybkLVa" role="2YOnzZ">
         <property role="TrG5h" value="access" />
         <property role="1OHxBQ" value="6po$YwiVCCq/InOut" />
-        <node concept="1j8hun" id="5GTDeybkLVb" role="1tU5fm">
-          <node concept="10P55v" id="5GTDeybkLVD" role="1j8huj" />
-        </node>
+        <node concept="10P55v" id="4g2eXcptFkQ" role="1tU5fm" />
       </node>
       <node concept="1pt3V6" id="5GTDeybkLVc" role="2YOnzW">
         <property role="TrG5h" value="run" />
@@ -513,9 +509,12 @@
     </node>
     <node concept="2yRzQl" id="5GTDeybkLYV" role="2PtZiJ">
       <property role="TrG5h" value="errorSum" />
-      <node concept="SB1Cm" id="5GTDeybkM0A" role="SB1Ct" />
+      <node concept="SB1Cm" id="5GTDeybkM0A" role="SB1Ct">
+        <ref role="SB1Ch" node="5GTDeybkLZY" resolve="target" />
+      </node>
       <node concept="SB1Cm" id="5GTDeybkM0C" role="SB1Ct">
         <property role="SB1Cj" value="5wYy1lwCD80/Negative" />
+        <ref role="SB1Ch" node="5GTDeybkM0d" resolve="measured" />
       </node>
       <node concept="1OHxBU" id="5GTDeybkLZJ" role="2YOnzZ">
         <property role="TrG5h" value="output_sum" />
