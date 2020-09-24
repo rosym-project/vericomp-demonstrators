@@ -29,6 +29,9 @@
       <concept id="1070534760951" name="jetbrains.mps.baseLanguage.structure.ArrayType" flags="in" index="10Q1$e">
         <child id="1070534760952" name="componentType" index="10Q1$1" />
       </concept>
+      <concept id="1068431474542" name="jetbrains.mps.baseLanguage.structure.VariableDeclaration" flags="ng" index="33uBYm">
+        <child id="1068431790190" name="initializer" index="33vP2m" />
+      </concept>
       <concept id="1225271177708" name="jetbrains.mps.baseLanguage.structure.StringType" flags="in" index="17QB3L" />
       <concept id="4972933694980447171" name="jetbrains.mps.baseLanguage.structure.BaseVariableDeclaration" flags="ng" index="19Szcq">
         <child id="5680397130376446158" name="type" index="1tU5fm" />
@@ -39,6 +42,9 @@
       <concept id="1154542696413" name="jetbrains.mps.baseLanguage.structure.ArrayCreatorWithInitializer" flags="nn" index="3g6Rrh">
         <child id="1154542793668" name="componentType" index="3g7fb8" />
         <child id="1154542803372" name="initValue" index="3g7hyw" />
+      </concept>
+      <concept id="5497648299878491908" name="jetbrains.mps.baseLanguage.structure.BaseVariableReference" flags="nn" index="1M0zk4">
+        <reference id="5497648299878491909" name="baseVariableDeclaration" index="1M0zk5" />
       </concept>
     </language>
     <language id="88e31b22-f7a1-4ed1-a668-9711cad402e2" name="Geometry">
@@ -106,6 +112,7 @@
       </concept>
     </language>
     <language id="a8f70f9e-ef01-499f-885c-c79273fa1695" name="Algorithm">
+      <concept id="3246721330495209605" name="Algorithm.structure.Reference" flags="ng" index="9PQHs" />
       <concept id="7995833768567805407" name="Algorithm.structure.DataConnection" flags="ng" index="2cu7QH" />
       <concept id="1292841379851053318" name="Algorithm.structure.AlgorithmBlockInst" flags="ng" index="2d0V5$">
         <reference id="1292841379851053319" name="type" index="2d0V5_" />
@@ -153,6 +160,9 @@
       </concept>
       <concept id="5195753005471121027" name="Algorithm.structure.IDataConnectorProvider" flags="ng" index="3fRjHn">
         <child id="1550618328762864955" name="closures" index="2pAz8s" />
+      </concept>
+      <concept id="8661093765501646195" name="Algorithm.structure.ReferenceType" flags="ig" index="1j8hun">
+        <child id="8661093765501646199" name="componentType" index="1j8huj" />
       </concept>
       <concept id="7268768516385108286" name="Algorithm.structure.TriggerConnector" flags="ng" index="1psEHa" />
       <concept id="7268768516385006770" name="Algorithm.structure.TriggerPort" flags="ng" index="1pt3V6">
@@ -690,6 +700,30 @@
         <node concept="10P55v" id="5GTDeybecuc" role="2ipnhG" />
       </node>
     </node>
+    <node concept="vjVuy" id="2OeEX$$Qqoj" role="2pAz8u">
+      <property role="TrG5h" value="sum_in" />
+      <node concept="10Q1$e" id="2OeEX$$Qqp4" role="1tU5fm">
+        <node concept="1j8hun" id="2OeEX$$QqoK" role="10Q1$1">
+          <node concept="10P55v" id="2OeEX$$QqoV" role="1j8huj" />
+        </node>
+      </node>
+      <node concept="2ShNRf" id="2OeEX$$Qqpv" role="33vP2m">
+        <node concept="3g6Rrh" id="2OeEX$$QrAS" role="2ShVmc">
+          <node concept="1j8hun" id="2OeEX$$QrBA" role="3g7fb8">
+            <node concept="10P55v" id="2OeEX$$QrCB" role="1j8huj" />
+          </node>
+          <node concept="9PQHs" id="2OeEX$_4v1x" role="3g7hyw">
+            <ref role="1M0zk5" node="7gRMHh5zZwv" resolve="err" />
+          </node>
+          <node concept="9PQHs" id="2OeEX$_4uYT" role="3g7hyw">
+            <ref role="1M0zk5" node="4P16e60b912" resolve="integ" />
+          </node>
+          <node concept="9PQHs" id="2OeEX$$TArH" role="3g7hyw">
+            <ref role="1M0zk5" node="4P16e60b93C" resolve="diff" />
+          </node>
+        </node>
+      </node>
+    </node>
     <node concept="vjVuy" id="4P16e60b912" role="2pAz8u">
       <property role="TrG5h" value="integ" />
       <node concept="slerG" id="4P16e60b91m" role="1tU5fm">
@@ -833,8 +867,8 @@
         <ref role="2mI24v" to="s8z2:1m4TMuc7HdY" resolve="in" />
       </node>
       <node concept="2cu7QH" id="4P16e60b95u" role="2dHiq0">
-        <ref role="2cu7Qi" node="7gRMHh5zZwv" resolve="err" />
-        <ref role="2mI24v" node="7gRMHh5zZwv" resolve="err" />
+        <ref role="2cu7Qi" node="2OeEX$$Qqoj" resolve="sum_in" />
+        <ref role="2mI24v" node="2OeEX$$Qqoj" resolve="sum_in" />
       </node>
     </node>
     <node concept="1OHxBB" id="4P16e60b96c" role="2pAz8s">

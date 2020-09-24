@@ -61,6 +61,9 @@
       <concept id="8213653556241839009" name="Algorithm.structure.TriggerStatement" flags="ng" index="1e5Z75">
         <reference id="8213653556245970054" name="trigger" index="LPJVy" />
       </concept>
+      <concept id="8661093765501646195" name="Algorithm.structure.ReferenceType" flags="ig" index="1j8hun">
+        <child id="8661093765501646199" name="componentType" index="1j8huj" />
+      </concept>
       <concept id="7268768516385006770" name="Algorithm.structure.TriggerPort" flags="ng" index="1pt3V6">
         <property id="65996431591721054" name="direction" index="2_BrWT" />
       </concept>
@@ -97,7 +100,9 @@
         <property role="TrG5h" value="in" />
         <property role="1OHxBQ" value="6po$YwiVCCm/In" />
         <node concept="10Q1$e" id="1m4TMuc7Heq" role="1tU5fm">
-          <node concept="10P55v" id="1m4TMuc7Hej" role="10Q1$1" />
+          <node concept="1j8hun" id="2OeEX$$QulS" role="10Q1$1">
+            <node concept="10P55v" id="2OeEX$$Qum8" role="1j8huj" />
+          </node>
         </node>
       </node>
       <node concept="1OHxBU" id="1m4TMuc7HeG" role="2YOnzZ">
