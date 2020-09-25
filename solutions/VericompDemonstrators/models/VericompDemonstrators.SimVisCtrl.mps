@@ -489,9 +489,6 @@
           <ref role="1XHb3H" node="5GTDeybeaQw" resolve="gains" />
           <ref role="LIGQ2" node="5GTDeybeaPO" resolve="gains" />
         </node>
-        <node concept="1XHb3G" id="5GTDeybecmB" role="2UjYXA">
-          <ref role="LIGQ2" node="5GTDeybeckJ" resolve="nr_joints" />
-        </node>
       </node>
     </node>
   </node>
