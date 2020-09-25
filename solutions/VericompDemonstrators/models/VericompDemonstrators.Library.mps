@@ -49,7 +49,7 @@
         <property id="8204000063695768670" name="module" index="G13F9" />
         <property id="8204000063695768673" name="import" index="G13FQ" />
         <property id="1455541779002196627" name="function" index="1h6pOq" />
-        <child id="1455541779003601248" name="properties" index="1h3eVD" />
+        <child id="1455541779003601248" name="attributes" index="1h3eVD" />
       </concept>
       <concept id="3725923812855012100" name="Algorithm.structure.FunctionBlock" flags="ng" index="2YOnzN">
         <child id="3725923812855012107" name="trigger_port" index="2YOnzW" />
@@ -75,7 +75,6 @@
       </concept>
     </language>
     <language id="3459f9c4-b876-4b39-b656-59424a2a8ae3" name="KinematicChains_Algorithm">
-      <concept id="3772408315660851476" name="KinematicChains_Algorithm.structure.JointPosition" flags="ig" index="1QUT1O" />
       <concept id="3772408315660850613" name="KinematicChains_Algorithm.structure.Joint" flags="ig" index="1QUTNl" />
     </language>
   </registry>
@@ -465,7 +464,7 @@
       <node concept="1OHxBU" id="1E4V7_ZwuCH" role="2YOnzZ">
         <property role="TrG5h" value="q" />
         <property role="1OHxBQ" value="6po$YwiVCCm/In" />
-        <node concept="1QUT1O" id="1E4V7_ZwuCR" role="1tU5fm" />
+        <node concept="10P55v" id="6MmDa_$jdN_" role="1tU5fm" />
       </node>
       <node concept="1OHxBU" id="1E4V7_ZwuCY" role="2YOnzZ">
         <property role="TrG5h" value="x" />
@@ -577,7 +576,7 @@
         <property role="TrG5h" value="array_access" />
         <property role="1OHxBQ" value="6po$YwiVCCm/In" />
         <node concept="10Q1$e" id="2dauTz5XLib" role="1tU5fm">
-          <node concept="1QUTNl" id="4g2eXcptFlF" role="10Q1$1" />
+          <node concept="10P55v" id="6MmDa_$jdOu" role="10Q1$1" />
         </node>
       </node>
       <node concept="1OHxBU" id="2dauTz5XLic" role="2YOnzZ">
@@ -588,7 +587,7 @@
       <node concept="1OHxBU" id="2dauTz5XLie" role="2YOnzZ">
         <property role="TrG5h" value="access" />
         <property role="1OHxBQ" value="6po$YwiVCCq/InOut" />
-        <node concept="1QUTNl" id="4g2eXcptFlW" role="1tU5fm" />
+        <node concept="10P55v" id="6MmDa_$jdOC" role="1tU5fm" />
       </node>
       <node concept="1pt3V6" id="2dauTz5XLii" role="2YOnzW">
         <property role="TrG5h" value="trigger" />

@@ -509,12 +509,12 @@
     </node>
     <node concept="vjVuy" id="1E4V7_ZwuE_" role="2pAz8u">
       <property role="TrG5h" value="q" />
-      <node concept="1QUT1O" id="1E4V7_ZwuEM" role="1tU5fm" />
+      <node concept="10P55v" id="6MmDa_$jdJ7" role="1tU5fm" />
     </node>
     <node concept="vjVuy" id="2dauTz5XLgS" role="2pAz8u">
       <property role="TrG5h" value="q_arr" />
       <node concept="10Q1$e" id="2dauTz5XLhp" role="1tU5fm">
-        <node concept="1QUT1O" id="2dauTz5XLhj" role="10Q1$1" />
+        <node concept="10P55v" id="6MmDa_$jdNE" role="10Q1$1" />
       </node>
     </node>
     <node concept="1OHxBB" id="1E4V7_ZwuFi" role="2pAz8s">
@@ -605,6 +605,36 @@
       <node concept="2cu7QH" id="2dauTz5XLwo" role="2dHiq0">
         <ref role="2cu7Qi" node="2dauTz5XLqk" resolve="iter" />
         <ref role="2mI24v" node="53CmqhFVV0w" resolve="has_next" />
+      </node>
+    </node>
+    <node concept="1OHxBB" id="6MmDa_$jesN" role="2pAz8s">
+      <node concept="2cu7QH" id="6MmDa_$jesO" role="2dHiq2">
+        <ref role="2cu7Qi" node="2dauTz5XLiO" resolve="q_acc" />
+        <ref role="2mI24v" to="s8z2:2dauTz5XLic" resolve="index" />
+      </node>
+      <node concept="2cu7QH" id="6MmDa_$jesP" role="2dHiq0">
+        <ref role="2cu7Qi" node="2dauTz5XLqk" resolve="iter" />
+        <ref role="2mI24v" node="53CmqhFVV0o" resolve="index" />
+      </node>
+    </node>
+    <node concept="1OHxBB" id="6MmDa_$jetw" role="2pAz8s">
+      <node concept="2cu7QH" id="6MmDa_$jetx" role="2dHiq2">
+        <ref role="2cu7Qi" node="2dauTz5XLiO" resolve="q_acc" />
+        <ref role="2mI24v" to="s8z2:2dauTz5XLia" resolve="array_access" />
+      </node>
+      <node concept="2cu7QH" id="6MmDa_$jety" role="2dHiq0">
+        <ref role="2cu7Qi" node="2dauTz5XLgS" resolve="q_arr" />
+        <ref role="2mI24v" node="2dauTz5XLgS" resolve="q_arr" />
+      </node>
+    </node>
+    <node concept="1OHxBB" id="6MmDa_$jeug" role="2pAz8s">
+      <node concept="2cu7QH" id="6MmDa_$jeuh" role="2dHiq2">
+        <ref role="2cu7Qi" node="2dauTz5XLiO" resolve="q_acc" />
+        <ref role="2mI24v" to="s8z2:2dauTz5XLie" resolve="access" />
+      </node>
+      <node concept="2cu7QH" id="6MmDa_$jeui" role="2dHiq0">
+        <ref role="2cu7Qi" node="1E4V7_ZwuE_" resolve="q" />
+        <ref role="2mI24v" node="1E4V7_ZwuE_" resolve="q" />
       </node>
     </node>
     <node concept="1OHxBB" id="2dauTz5XLyM" role="2pAz8s">
@@ -755,6 +785,16 @@
       <node concept="2dP7qM" id="2dauTz5XHTC" role="2dHiq0">
         <ref role="2cu7Qi" node="2dauTz5XHR7" resolve="x_tot_acc" />
         <ref role="2mI24v" to="s8z2:2dauTz5XHQj" resolve="trigger" />
+      </node>
+    </node>
+    <node concept="1psEHa" id="6MmDa_$jeso" role="2pAz8r">
+      <node concept="2dP7qM" id="6MmDa_$jesp" role="2dHiq2">
+        <ref role="2cu7Qi" node="2dauTz5XHJ_" resolve="sweep" />
+        <ref role="2mI24v" to="s8z2:1E4V7_ZwuMD" resolve="next" />
+      </node>
+      <node concept="2dP7qM" id="6MmDa_$jesq" role="2dHiq0">
+        <ref role="2cu7Qi" node="2dauTz5XLiO" resolve="q_acc" />
+        <ref role="2mI24v" to="s8z2:2dauTz5XLii" resolve="trigger" />
       </node>
     </node>
     <node concept="2d0V5$" id="2dauTz5XLqk" role="2d0V5C">
@@ -1228,7 +1268,7 @@
     </node>
   </node>
   <node concept="2$3l2Q" id="2dauTz5Xj_f">
-    <property role="TrG5h" value="Iterators" />
+    <property role="TrG5h" value="KinematicChainIteratorLib" />
     <node concept="2_B1M1" id="2dauTz5XLpV" role="2$cYEw">
       <property role="TrG5h" value="next" />
       <node concept="1pt3V6" id="2dauTz5XLpY" role="1OHzVH">
