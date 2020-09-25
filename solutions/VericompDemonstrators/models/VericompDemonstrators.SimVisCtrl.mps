@@ -146,6 +146,10 @@
         <reference id="1779622228161425" name="port" index="2mI24v" />
       </concept>
       <concept id="7995833768577507008" name="Algorithm.structure.TriggerConnection" flags="ng" index="2dP7qM" />
+      <concept id="7824622450030242524" name="Algorithm.structure.AttributeConfiguration" flags="ng" index="f3WTP">
+        <reference id="7824622450030242529" name="attribute" index="f3WT8" />
+        <child id="7824622450030242527" name="value" index="f3WTQ" />
+      </concept>
       <concept id="349167071911517046" name="Algorithm.structure.FixedSizeArrayType" flags="ig" index="slerG">
         <property id="349167071911849189" name="size" index="sit5Z" />
         <child id="874355859793584745" name="componentType" index="2ipnhG" />
@@ -175,6 +179,7 @@
       <concept id="65996431591631846" name="Algorithm.structure.EmptySchedulerBlock" flags="ng" index="2_B1M1" />
       <concept id="5416189171681144221" name="Algorithm.structure.FunctionBlockInst" flags="ng" index="2Ptgr7">
         <reference id="5416189171681144225" name="type" index="2PtgrV" />
+        <child id="7824622450030242532" name="attributes" index="f3WTd" />
       </concept>
       <concept id="5830008280348868255" name="Algorithm.structure.PredefinedAlgorithmBlock" flags="ng" index="VbYsV" />
       <concept id="5195753005471121027" name="Algorithm.structure.IDataConnectorProvider" flags="ng" index="3fRjHn">
@@ -638,7 +643,7 @@
     </node>
     <node concept="vjVuy" id="1E4V7_ZwuQs" role="2pAz8u">
       <property role="TrG5h" value="x_rel" />
-      <node concept="70UUS" id="1E4V7_ZwuQJ" role="1tU5fm" />
+      <node concept="70UUS" id="6MmDa_zTwGi" role="1tU5fm" />
     </node>
     <node concept="vjVuy" id="1E4V7_ZwuSw" role="2pAz8u">
       <property role="TrG5h" value="x_tot_prev" />
@@ -892,18 +897,48 @@
     <node concept="2Ptgr7" id="4P16e60b8PA" role="2pAz8v">
       <property role="TrG5h" value="error" />
       <ref role="2PtgrV" to="s8z2:1whTsdr00oq" resolve="SetpointError" />
+      <node concept="f3WTP" id="6MmDa_$dbGf" role="f3WTd">
+        <ref role="f3WT8" to="s8z2:1whTsdr00pW" resolve="size" />
+        <node concept="3cmrfG" id="6MmDa_$dbGm" role="f3WTQ">
+          <property role="3cmrfH" value="7" />
+        </node>
+      </node>
     </node>
     <node concept="2Ptgr7" id="4P16e60b8S0" role="2pAz8v">
       <property role="TrG5h" value="integ" />
       <ref role="2PtgrV" to="s8z2:1whTsdr00us" resolve="Integrator" />
+      <node concept="f3WTP" id="6MmDa_$dbGv" role="f3WTd">
+        <ref role="f3WT8" to="s8z2:1whTsdr00wo" resolve="size" />
+        <node concept="3cmrfG" id="6MmDa_$dbGE" role="f3WTQ">
+          <property role="3cmrfH" value="7" />
+        </node>
+      </node>
     </node>
     <node concept="2Ptgr7" id="4P16e60b8Vi" role="2pAz8v">
       <property role="TrG5h" value="diff" />
       <ref role="2PtgrV" to="s8z2:1whTsdr00$A" resolve="Differentiator" />
+      <node concept="f3WTP" id="6MmDa_$dbGN" role="f3WTd">
+        <ref role="f3WT8" to="s8z2:1whTsdr00AU" resolve="size" />
+        <node concept="3cmrfG" id="6MmDa_$dbH1" role="f3WTQ">
+          <property role="3cmrfH" value="7" />
+        </node>
+      </node>
     </node>
     <node concept="2Ptgr7" id="4P16e60b94D" role="2pAz8v">
       <property role="TrG5h" value="sum" />
       <ref role="2PtgrV" to="s8z2:1m4TMuc7Hbs" resolve="Sum" />
+      <node concept="f3WTP" id="6MmDa_$dbHa" role="f3WTd">
+        <ref role="f3WT8" to="s8z2:1m4TMuc7HcK" resolve="nr_signals" />
+        <node concept="3cmrfG" id="6MmDa_$dbHo" role="f3WTQ">
+          <property role="3cmrfH" value="3" />
+        </node>
+      </node>
+      <node concept="f3WTP" id="6MmDa_$dbI2" role="f3WTd">
+        <ref role="f3WT8" to="s8z2:1m4TMuc7Hcw" resolve="size" />
+        <node concept="3cmrfG" id="6MmDa_$dbIi" role="f3WTQ">
+          <property role="3cmrfH" value="7" />
+        </node>
+      </node>
     </node>
     <node concept="1psEHa" id="4P16e60b9dE" role="2pAz8r">
       <node concept="2dP7qM" id="4P16e60b9dF" role="2dHiq2">
