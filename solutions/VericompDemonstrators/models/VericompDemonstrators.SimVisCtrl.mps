@@ -1244,39 +1244,6 @@
       </node>
     </node>
   </node>
-  <node concept="vjVuS" id="2dauTz5XLmD">
-    <property role="TrG5h" value="KinematicChainIteratorO" />
-    <node concept="vjVuy" id="2dauTz5XLmE" role="2pAz8u">
-      <property role="TrG5h" value="index" />
-      <node concept="10Oyi0" id="2dauTz5XLmK" role="1tU5fm" />
-    </node>
-    <node concept="vjVuy" id="2dauTz5XLmP" role="2pAz8u">
-      <property role="TrG5h" value="chain" />
-      <node concept="36mVd5" id="2dauTz5XLmZ" role="1tU5fm">
-        <ref role="1f2HVY" node="74x228YnuM5" resolve="2dof" />
-      </node>
-    </node>
-    <node concept="vjVuy" id="2dauTz5XLoS" role="2pAz8u">
-      <property role="TrG5h" value="joint" />
-      <node concept="1QUTNl" id="2dauTz5XLp2" role="1tU5fm" />
-    </node>
-    <node concept="vjVuy" id="2dauTz5XLp9" role="2pAz8u">
-      <property role="TrG5h" value="x_link" />
-      <node concept="70UUS" id="2dauTz5XLpl" role="1tU5fm" />
-    </node>
-    <node concept="vjVuy" id="2dauTz5XLp$" role="2pAz8u">
-      <property role="TrG5h" value="has_next" />
-      <node concept="10P_77" id="2dauTz5XLpM" role="1tU5fm" />
-    </node>
-    <node concept="2$bkLk" id="2dauTz5XLqb" role="2pAz8t">
-      <property role="TrG5h" value="next" />
-      <ref role="2$bkLg" node="2dauTz5XLpV" resolve="next" />
-    </node>
-    <node concept="2$bkLk" id="2dauTz5XLqg" role="2pAz8t">
-      <property role="TrG5h" value="reset" />
-      <ref role="2$bkLg" node="2dauTz5XLq4" resolve="reset" />
-    </node>
-  </node>
   <node concept="VbYsV" id="53CmqhFVV0n">
     <property role="TrG5h" value="KinematicChainIterator" />
     <node concept="2$bkLk" id="53CmqhFVV0Q" role="2pAz8t">
