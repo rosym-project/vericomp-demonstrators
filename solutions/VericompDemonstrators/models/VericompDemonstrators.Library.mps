@@ -49,11 +49,11 @@
         <property id="8204000063695768670" name="module" index="G13F9" />
         <property id="8204000063695768673" name="import" index="G13FQ" />
         <property id="1455541779002196627" name="function" index="1h6pOq" />
-        <child id="1455541779003601248" name="attributes" index="1h3eVD" />
       </concept>
       <concept id="3725923812855012100" name="Algorithm.structure.FunctionBlock" flags="ng" index="2YOnzN">
         <child id="3725923812855012107" name="trigger_port" index="2YOnzW" />
         <child id="3725923812855012104" name="data_ports" index="2YOnzZ" />
+        <child id="1455541779003601248" name="attributes" index="1h3eVD" />
       </concept>
       <concept id="8213653556241839012" name="Algorithm.structure.WhileDoStatement" flags="ng" index="1e5Z70">
         <reference id="8213653556241839019" name="condition" index="1e5Z7f" />
@@ -86,6 +86,14 @@
       <property role="G13FQ" value="crtl2b.functions.ctrl2b" />
       <property role="1h6pOq" value="ctrl2b_sum" />
       <property role="2p$X_u" value="ctrl2b_sum_nbx" />
+      <node concept="19Szcq" id="1m4TMuc7Hcw" role="1h3eVD">
+        <property role="TrG5h" value="size" />
+        <node concept="10Oyi0" id="1m4TMuc7HcE" role="1tU5fm" />
+      </node>
+      <node concept="19Szcq" id="1m4TMuc7HcK" role="1h3eVD">
+        <property role="TrG5h" value="nr_signals" />
+        <node concept="10Oyi0" id="1m4TMuc7Hd2" role="1tU5fm" />
+      </node>
       <node concept="1OHxBU" id="1m4TMuc7Hdw" role="2YOnzZ">
         <property role="TrG5h" value="gain" />
         <property role="1OHxBQ" value="6po$YwiVCCm/In" />
@@ -109,14 +117,6 @@
           <node concept="10P55v" id="1m4TMuc7Hf2" role="10Q1$1" />
         </node>
       </node>
-      <node concept="19Szcq" id="1m4TMuc7Hcw" role="1h3eVD">
-        <property role="TrG5h" value="size" />
-        <node concept="10Oyi0" id="1m4TMuc7HcE" role="1tU5fm" />
-      </node>
-      <node concept="19Szcq" id="1m4TMuc7HcK" role="1h3eVD">
-        <property role="TrG5h" value="nr_signals" />
-        <node concept="10Oyi0" id="1m4TMuc7Hd2" role="1tU5fm" />
-      </node>
       <node concept="1pt3V6" id="1m4TMuc7Hbt" role="2YOnzW">
         <property role="TrG5h" value="trigger" />
         <property role="2_BrWT" value="3EtQu_uj5h/In" />
@@ -128,6 +128,10 @@
       <property role="G13FQ" value="crtl2b.functions.ctrl2b" />
       <property role="1h6pOq" value="ctrl2b_sp_err" />
       <property role="2p$X_u" value="ctrl2b_sp_err_nbx" />
+      <node concept="19Szcq" id="1whTsdr00pW" role="1h3eVD">
+        <property role="TrG5h" value="size" />
+        <node concept="10Oyi0" id="1whTsdr00q6" role="1tU5fm" />
+      </node>
       <node concept="1OHxBU" id="1whTsdr00qc" role="2YOnzZ">
         <property role="TrG5h" value="dsr" />
         <property role="1OHxBQ" value="6po$YwiVCCm/In" />
@@ -149,10 +153,6 @@
           <node concept="10P55v" id="1whTsdr00s9" role="10Q1$1" />
         </node>
       </node>
-      <node concept="19Szcq" id="1whTsdr00pW" role="1h3eVD">
-        <property role="TrG5h" value="size" />
-        <node concept="10Oyi0" id="1whTsdr00q6" role="1tU5fm" />
-      </node>
       <node concept="1pt3V6" id="1whTsdr00or" role="2YOnzW">
         <property role="TrG5h" value="trigger" />
         <property role="2_BrWT" value="3EtQu_uj5h/In" />
@@ -164,6 +164,10 @@
       <property role="G13FQ" value="crtl2b.functions.ctrl2b" />
       <property role="1h6pOq" value="ctrl2b_integ" />
       <property role="2p$X_u" value="ctrl2b_integ_nbx" />
+      <node concept="19Szcq" id="1whTsdr00wo" role="1h3eVD">
+        <property role="TrG5h" value="size" />
+        <node concept="10Oyi0" id="1whTsdr00wy" role="1tU5fm" />
+      </node>
       <node concept="1OHxBU" id="1whTsdr00xQ" role="2YOnzZ">
         <property role="TrG5h" value="dt" />
         <property role="1OHxBQ" value="6po$YwiVCCm/In" />
@@ -183,10 +187,6 @@
           <node concept="10P55v" id="1whTsdr00xt" role="10Q1$1" />
         </node>
       </node>
-      <node concept="19Szcq" id="1whTsdr00wo" role="1h3eVD">
-        <property role="TrG5h" value="size" />
-        <node concept="10Oyi0" id="1whTsdr00wy" role="1tU5fm" />
-      </node>
       <node concept="1pt3V6" id="1whTsdr00ut" role="2YOnzW">
         <property role="TrG5h" value="trigger" />
         <property role="2_BrWT" value="3EtQu_uj5h/In" />
@@ -198,6 +198,10 @@
       <property role="G13FQ" value="crtl2b.functions.ctrl2b" />
       <property role="1h6pOq" value="ctrl2b_deriv" />
       <property role="2p$X_u" value="ctrl2b_deriv_nbx" />
+      <node concept="19Szcq" id="1whTsdr00AU" role="1h3eVD">
+        <property role="TrG5h" value="size" />
+        <node concept="10Oyi0" id="1whTsdr00B8" role="1tU5fm" />
+      </node>
       <node concept="1OHxBU" id="1whTsdr00Be" role="2YOnzZ">
         <property role="TrG5h" value="dt" />
         <property role="1OHxBQ" value="6po$YwiVCCm/In" />
@@ -217,10 +221,6 @@
           <node concept="10P55v" id="1whTsdr00Cr" role="10Q1$1" />
         </node>
       </node>
-      <node concept="19Szcq" id="1whTsdr00AU" role="1h3eVD">
-        <property role="TrG5h" value="size" />
-        <node concept="10Oyi0" id="1whTsdr00B8" role="1tU5fm" />
-      </node>
       <node concept="1pt3V6" id="1whTsdr00$B" role="2YOnzW">
         <property role="TrG5h" value="trigger" />
         <property role="2_BrWT" value="3EtQu_uj5h/In" />
@@ -232,6 +232,10 @@
       <property role="G13FQ" value="ctrl2b.functions.ctrl2b" />
       <property role="1h6pOq" value="ctrl2b_pid_blx" />
       <property role="2p$X_u" value="ctrl2b_pid_blx_nbx" />
+      <node concept="19Szcq" id="1m4TMuc7H8f" role="1h3eVD">
+        <property role="TrG5h" value="size" />
+        <node concept="10Oyi0" id="1m4TMuc7H8g" role="1tU5fm" />
+      </node>
       <node concept="1OHxBU" id="1m4TMuc7H7P" role="2YOnzZ">
         <property role="TrG5h" value="dt" />
         <property role="1OHxBQ" value="6po$YwiVCCm/In" />
@@ -292,10 +296,6 @@
         <node concept="10Q1$e" id="1m4TMuc7H8d" role="1tU5fm">
           <node concept="10P55v" id="1m4TMuc7H8e" role="10Q1$1" />
         </node>
-      </node>
-      <node concept="19Szcq" id="1m4TMuc7H8f" role="1h3eVD">
-        <property role="TrG5h" value="size" />
-        <node concept="10Oyi0" id="1m4TMuc7H8g" role="1tU5fm" />
       </node>
       <node concept="1pt3V6" id="1m4TMuc7H8h" role="2YOnzW">
         <property role="TrG5h" value="trigger" />
