@@ -170,9 +170,6 @@
       <concept id="2077603528175021362" name="Algorithm.structure.SchedulerBlockInst" flags="ng" index="2$bkLk">
         <reference id="2077603528175021366" name="type" index="2$bkLg" />
       </concept>
-      <concept id="65996431592360841" name="Algorithm.structure.TriggerPortRef" flags="ng" index="2_qZNI">
-        <reference id="65996431592360842" name="trigger_port" index="2_qZNH" />
-      </concept>
       <concept id="65996431592056450" name="Algorithm.structure.FixedDataFlowSchedulerBlock" flags="ng" index="2__D7_">
         <child id="65996431592056451" name="schedule" index="2__D7$" />
       </concept>
@@ -182,6 +179,9 @@
         <child id="7824622450030242532" name="attributes" index="f3WTd" />
       </concept>
       <concept id="5830008280348868255" name="Algorithm.structure.PredefinedAlgorithmBlock" flags="ng" index="VbYsV" />
+      <concept id="8213653556241839009" name="Algorithm.structure.TriggerStatement" flags="ng" index="1e5Z75">
+        <reference id="8213653556245970054" name="trigger" index="LPJVy" />
+      </concept>
       <concept id="5195753005471121027" name="Algorithm.structure.IDataConnectorProvider" flags="ng" index="3fRjHn">
         <child id="1550618328762864955" name="closures" index="2pAz8s" />
       </concept>
@@ -1127,11 +1127,11 @@
     <property role="TrG5h" value="KinCtrlLib" />
     <node concept="2__D7_" id="1E4V7_ZwuoF" role="2$cYEw">
       <property role="TrG5h" value="kin_ctrl" />
-      <node concept="2_qZNI" id="1E4V7_ZwuoT" role="2__D7$">
-        <ref role="2_qZNH" node="1E4V7_ZwuoK" resolve="ctrl" />
+      <node concept="1e5Z75" id="3fay3NODxuI" role="2__D7$">
+        <ref role="LPJVy" node="1E4V7_ZwuoK" resolve="ctrl" />
       </node>
-      <node concept="2_qZNI" id="1E4V7_ZwuoZ" role="2__D7$">
-        <ref role="2_qZNH" node="1E4V7_ZwuoN" resolve="kin" />
+      <node concept="1e5Z75" id="3fay3NODxuW" role="2__D7$">
+        <ref role="LPJVy" node="1E4V7_ZwuoN" resolve="kin" />
       </node>
       <node concept="1pt3V6" id="1E4V7_ZwuoI" role="1OHzVH">
         <property role="TrG5h" value="trigger" />

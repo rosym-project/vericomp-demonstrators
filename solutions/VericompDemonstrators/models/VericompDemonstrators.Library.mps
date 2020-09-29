@@ -38,9 +38,6 @@
         <child id="2077603528173865926" name="scheduler_blocks" index="2$cYEw" />
         <child id="5416189171681058805" name="function_blocks" index="2PtZiJ" />
       </concept>
-      <concept id="65996431592360841" name="Algorithm.structure.TriggerPortRef" flags="ng" index="2_qZNI">
-        <reference id="65996431592360842" name="trigger_port" index="2_qZNH" />
-      </concept>
       <concept id="65996431592056450" name="Algorithm.structure.FixedDataFlowSchedulerBlock" flags="ng" index="2__D7_">
         <child id="65996431592056451" name="schedule" index="2__D7$" />
       </concept>
@@ -307,8 +304,11 @@
     <property role="TrG5h" value="CtrlSchedules" />
     <node concept="2__D7_" id="4P16e60b9bF" role="2$cYEw">
       <property role="TrG5h" value="p_sched" />
-      <node concept="2_qZNI" id="4P16e60bb46" role="2__D7$">
-        <ref role="2_qZNH" node="4P16e60bb3Z" resolve="error" />
+      <node concept="1e5Z75" id="3fay3NODEyi" role="2__D7$">
+        <ref role="LPJVy" node="4P16e60bb3Z" resolve="error" />
+      </node>
+      <node concept="1e5Z75" id="3fay3NODEyz" role="2__D7$">
+        <ref role="LPJVy" node="4P16e60b9bS" resolve="proportional" />
       </node>
       <node concept="1pt3V6" id="4P16e60b9bQ" role="1OHzVH">
         <property role="TrG5h" value="trigger" />
@@ -322,14 +322,17 @@
         <property role="TrG5h" value="proportional" />
         <property role="2_BrWT" value="3EtQu_uj5i/Out" />
       </node>
-      <node concept="2_qZNI" id="4P16e60b9bV" role="2__D7$">
-        <ref role="2_qZNH" node="4P16e60b9bS" resolve="proportional" />
-      </node>
     </node>
     <node concept="2__D7_" id="4P16e60b9cb" role="2$cYEw">
       <property role="TrG5h" value="pd_sched" />
-      <node concept="2_qZNI" id="4P16e60bb4j" role="2__D7$">
-        <ref role="2_qZNH" node="4P16e60bb4a" resolve="error" />
+      <node concept="1e5Z75" id="3fay3NODEyU" role="2__D7$">
+        <ref role="LPJVy" node="4P16e60bb4a" resolve="error" />
+      </node>
+      <node concept="1e5Z75" id="3fay3NODEzf" role="2__D7$">
+        <ref role="LPJVy" node="4P16e60b9cv" resolve="derivative" />
+      </node>
+      <node concept="1e5Z75" id="3fay3NODEzC" role="2__D7$">
+        <ref role="LPJVy" node="4P16e60b9cs" resolve="proportional" />
       </node>
       <node concept="1pt3V6" id="4P16e60b9cq" role="1OHzVH">
         <property role="TrG5h" value="trigger" />
@@ -347,17 +350,17 @@
         <property role="TrG5h" value="derivative" />
         <property role="2_BrWT" value="3EtQu_uj5i/Out" />
       </node>
-      <node concept="2_qZNI" id="4P16e60b9cz" role="2__D7$">
-        <ref role="2_qZNH" node="4P16e60b9cv" resolve="derivative" />
-      </node>
-      <node concept="2_qZNI" id="4P16e60b9cC" role="2__D7$">
-        <ref role="2_qZNH" node="4P16e60b9cs" resolve="proportional" />
-      </node>
     </node>
     <node concept="2__D7_" id="4P16e60b9d0" role="2$cYEw">
       <property role="TrG5h" value="pi_sched" />
-      <node concept="2_qZNI" id="4P16e60bb4x" role="2__D7$">
-        <ref role="2_qZNH" node="4P16e60bb4o" resolve="error" />
+      <node concept="1e5Z75" id="3fay3NODE$5" role="2__D7$">
+        <ref role="LPJVy" node="4P16e60bb4o" resolve="error" />
+      </node>
+      <node concept="1e5Z75" id="3fay3NODE$q" role="2__D7$">
+        <ref role="LPJVy" node="4P16e60b9dq" resolve="integral" />
+      </node>
+      <node concept="1e5Z75" id="3fay3NODE$N" role="2__D7$">
+        <ref role="LPJVy" node="4P16e60b9dn" resolve="proportional" />
       </node>
       <node concept="1pt3V6" id="4P16e60b9dl" role="1OHzVH">
         <property role="TrG5h" value="trigger" />
@@ -375,26 +378,20 @@
         <property role="TrG5h" value="integral" />
         <property role="2_BrWT" value="3EtQu_uj5i/Out" />
       </node>
-      <node concept="2_qZNI" id="4P16e60b9du" role="2__D7$">
-        <ref role="2_qZNH" node="4P16e60b9dq" resolve="integral" />
-      </node>
-      <node concept="2_qZNI" id="4P16e60b9dz" role="2__D7$">
-        <ref role="2_qZNH" node="4P16e60b9dn" resolve="proportional" />
-      </node>
     </node>
     <node concept="2__D7_" id="4P16e60b9aV" role="2$cYEw">
       <property role="TrG5h" value="pid_sched" />
-      <node concept="2_qZNI" id="4P16e60bb4L" role="2__D7$">
-        <ref role="2_qZNH" node="4P16e60bb4A" resolve="error" />
+      <node concept="1e5Z75" id="3fay3NODE_i" role="2__D7$">
+        <ref role="LPJVy" node="4P16e60bb4A" resolve="error" />
       </node>
-      <node concept="2_qZNI" id="4P16e60b9bk" role="2__D7$">
-        <ref role="2_qZNH" node="4P16e60b9b0" resolve="integral" />
+      <node concept="1e5Z75" id="3fay3NODE_F" role="2__D7$">
+        <ref role="LPJVy" node="4P16e60b9b0" resolve="integral" />
       </node>
-      <node concept="2_qZNI" id="4P16e60b9bs" role="2__D7$">
-        <ref role="2_qZNH" node="4P16e60b9b3" resolve="derivative" />
+      <node concept="1e5Z75" id="3fay3NODEA8" role="2__D7$">
+        <ref role="LPJVy" node="4P16e60b9b3" resolve="derivative" />
       </node>
-      <node concept="2_qZNI" id="4P16e60b9be" role="2__D7$">
-        <ref role="2_qZNH" node="4P16e60b9b7" resolve="proportional" />
+      <node concept="1e5Z75" id="3fay3NODEAD" role="2__D7$">
+        <ref role="LPJVy" node="4P16e60b9b7" resolve="proportional" />
       </node>
       <node concept="1pt3V6" id="4P16e60b9aY" role="1OHzVH">
         <property role="TrG5h" value="trigger" />
@@ -517,14 +514,14 @@
     </node>
     <node concept="2__D7_" id="1E4V7_ZwuJU" role="2$cYEw">
       <property role="TrG5h" value="ForwardPositionKinematicsSched" />
-      <node concept="2_qZNI" id="1E4V7_ZwuKg" role="2__D7$">
-        <ref role="2_qZNH" node="1E4V7_ZwuJZ" resolve="fpk" />
+      <node concept="1e5Z75" id="3fay3NODEH$" role="2__D7$">
+        <ref role="LPJVy" node="1E4V7_ZwuJZ" resolve="fpk" />
       </node>
-      <node concept="2_qZNI" id="1E4V7_ZwuKm" role="2__D7$">
-        <ref role="2_qZNH" node="1E4V7_ZwuK2" resolve="compose" />
+      <node concept="1e5Z75" id="3fay3NODEHT" role="2__D7$">
+        <ref role="LPJVy" node="1E4V7_ZwuK2" resolve="compose" />
       </node>
-      <node concept="2_qZNI" id="1E4V7_ZwuPN" role="2__D7$">
-        <ref role="2_qZNH" node="1E4V7_ZwuPE" resolve="accumulate" />
+      <node concept="1e5Z75" id="3fay3NODEIi" role="2__D7$">
+        <ref role="LPJVy" node="1E4V7_ZwuPE" resolve="accumulate" />
       </node>
       <node concept="1pt3V6" id="1E4V7_ZwuK6" role="1OHzVH">
         <property role="TrG5h" value="trigger" />
