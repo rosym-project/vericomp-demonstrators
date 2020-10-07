@@ -5,7 +5,6 @@
     <use id="218e40b4-75d4-4de8-83e6-b31e4da8bcee" name="Component" version="0" />
     <use id="88e31b22-f7a1-4ed1-a668-9711cad402e2" name="Geometry" version="0" />
     <use id="a5949a30-34e6-4033-823a-25cc66135ce1" name="Microblx" version="0" />
-    <use id="b75dd154-bfb3-42b8-81b5-9a0a9007b161" name="ComponentMicroblxGenerator" version="0" />
     <use id="17ce8e5a-8510-4af6-a493-490e056b4626" name="ComponentBehavior" version="0" />
     <use id="a8f70f9e-ef01-499f-885c-c79273fa1695" name="Algorithm" version="0" />
     <use id="3459f9c4-b876-4b39-b656-59424a2a8ae3" name="KinematicChains_Algorithm" version="0" />
@@ -14,7 +13,6 @@
     <engage id="8d7c3baa-c6d4-442a-843a-34b7b957af1e" name="Algorithm_CGenerator" />
   </languages>
   <imports>
-    <import index="v8gf" ref="r:5d101113-56c8-4cb3-ab80-1df64703a5d9(VericompDemonstrators.UserStories)" />
     <import index="s8z2" ref="r:58a77185-9e81-4001-bcd8-e8f0f3f58e1a(VericompDemonstrators.Library)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
   </imports>
@@ -259,11 +257,6 @@
   </node>
   <node concept="3tteAy" id="1HXIG33ubbM">
     <property role="TrG5h" value="SimVisCtrl" />
-    <node concept="3tteA_" id="5GTDeybeaMv" role="3ttgI7">
-      <property role="TrG5h" value="foo" />
-      <ref role="3ttcQ_" node="1HXIG33w2eD" />
-      <ref role="3ttcQw" node="1HXIG33ubbY" />
-    </node>
     <node concept="2WYcwU" id="1HXIG33ubbP" role="3ttgI2">
       <property role="TrG5h" value="vis" />
       <ref role="2WYf9R" node="1HXIG33u9tv" resolve="Visualization" />
@@ -336,59 +329,71 @@
           </node>
         </node>
       </node>
+      <node concept="FWJLR" id="39CzKTryprY" role="l9eUl">
+        <ref role="FWJLQ" node="12O8oKH8_8t" resolve="q_msr" />
+      </node>
+      <node concept="FWJLR" id="39CzKTryprZ" role="l9eUl">
+        <ref role="FWJLQ" node="12O8oKH8_9o" resolve="qd_cmd" />
+      </node>
     </node>
-    <node concept="2WYcwU" id="1HXIG33ubD_" role="3ttgI2">
+    <node concept="2WYcwU" id="39CzKTrypAW" role="3ttgI2">
       <property role="TrG5h" value="fpk" />
       <ref role="2WYf9R" node="1HXIG33ubBM" resolve="FPK" />
-      <node concept="1XxyJ9" id="1HXIG33ubEj" role="lGtFl">
-        <property role="TrG5h" value="Microblx (Software Platform)" />
-      </node>
-      <node concept="FWJLR" id="1HXIG33w2eD" role="l9eUl">
-        <ref role="FWJLQ" node="1HXIG33w2cY" resolve="x_tot" />
-      </node>
-      <node concept="FWJLR" id="2dauTz5XLg4" role="l9eUl">
+      <node concept="FWJLR" id="39CzKTrypBQ" role="l9eUl">
         <ref role="FWJLQ" node="1E4V7_ZwuL1" resolve="q" />
       </node>
-    </node>
-    <node concept="2WYcwU" id="1HXIG33ubE7" role="3ttgI2">
-      <property role="TrG5h" value="pid" />
-      <ref role="2WYf9R" node="1HXIG33ubDf" resolve="SevenDoFPIDControl" />
-      <node concept="1XxyJ9" id="1HXIG33ubFL" role="lGtFl">
+      <node concept="FWJLR" id="39CzKTrypBR" role="l9eUl">
+        <ref role="FWJLQ" node="1HXIG33w2cY" resolve="x_tot" />
+      </node>
+      <node concept="1XxyJ9" id="39CzKTrypC6" role="lGtFl">
         <property role="TrG5h" value="Microblx (Software Platform)" />
       </node>
-      <node concept="FWJLR" id="1OEFvYvqfgG" role="l9eUl">
+    </node>
+    <node concept="2WYcwU" id="3CGoADGFmma" role="3ttgI2">
+      <property role="TrG5h" value="pid" />
+      <ref role="2WYf9R" node="1HXIG33ubDf" resolve="SevenDoFPIDControl" />
+      <node concept="2WYd3i" id="3CGoADGFmnd" role="2WYf99">
+        <ref role="2WYd3v" node="5GTDeybeaQw" resolve="gains" />
+      </node>
+      <node concept="FWJLR" id="3CGoADGFmne" role="l9eUl">
         <ref role="FWJLQ" node="7gRMHh5zZus" resolve="dsr" />
       </node>
-      <node concept="FWJLR" id="1OEFvYvqfgH" role="l9eUl">
+      <node concept="FWJLR" id="3CGoADGFmnf" role="l9eUl">
         <ref role="FWJLQ" node="7gRMHh5zZuQ" resolve="msr" />
       </node>
-      <node concept="FWJLR" id="1OEFvYvqfgI" role="l9eUl">
+      <node concept="FWJLR" id="3CGoADGFmng" role="l9eUl">
         <ref role="FWJLQ" node="7gRMHh5zZv9" resolve="out" />
       </node>
-      <node concept="2WYd3i" id="5GTDeybeaZa" role="2WYf99">
-        <ref role="2WYd3v" node="5GTDeybeaQw" resolve="gains" />
-        <node concept="2ShNRf" id="5GTDeybeaZh" role="2WYd3h">
-          <node concept="3g6Rrh" id="5GTDeybecdU" role="2ShVmc">
-            <node concept="10P55v" id="5GTDeybec8x" role="3g7fb8" />
-            <node concept="3cmrfG" id="5GTDeybeceu" role="3g7hyw">
-              <property role="3cmrfH" value="1" />
-            </node>
-            <node concept="3cmrfG" id="5GTDeybeciH" role="3g7hyw">
-              <property role="3cmrfH" value="2" />
-            </node>
-            <node concept="3cmrfG" id="5GTDeybeciO" role="3g7hyw">
-              <property role="3cmrfH" value="3" />
-            </node>
-            <node concept="3cmrfG" id="5GTDeybeciX" role="3g7hyw">
-              <property role="3cmrfH" value="4" />
-            </node>
-          </node>
-        </node>
+      <node concept="1XxyJ9" id="3CGoADGFmnp" role="lGtFl">
+        <property role="TrG5h" value="Microblx (Software Platform)" />
       </node>
+    </node>
+    <node concept="3tteA_" id="39CzKTrypE5" role="3ttgI7">
+      <property role="TrG5h" value="sim2fpk" />
+      <ref role="3ttcQ_" node="39CzKTryprY" />
+      <ref role="3ttcQw" node="39CzKTrypBQ" />
+    </node>
+    <node concept="3tteA_" id="39CzKTrypE8" role="3ttgI7">
+      <property role="TrG5h" value="fpk2vis" />
+      <ref role="3ttcQ_" node="39CzKTrypBR" />
+      <ref role="3ttcQw" node="1HXIG33ubbY" />
     </node>
   </node>
   <node concept="2wom5B" id="1HXIG33ubdM">
     <property role="TrG5h" value="Simulation" />
+    <node concept="3tteAs" id="12O8oKH8_8t" role="3ttcQl">
+      <property role="1T6LxX" value="378Eyp8OV9o/Output" />
+      <property role="TrG5h" value="q_msr" />
+      <node concept="10Q1$e" id="12O8oKH8_8E" role="17RAGi">
+        <node concept="1QUT1O" id="39CzKTryp_4" role="10Q1$1" />
+      </node>
+    </node>
+    <node concept="3tteA$" id="12O8oKH8_9o" role="3ttcQl">
+      <property role="TrG5h" value="qd_cmd" />
+      <node concept="10Q1$e" id="12O8oKH8_9F" role="17RAGi">
+        <node concept="10P55v" id="12O8oKH8_9A" role="10Q1$1" />
+      </node>
+    </node>
     <node concept="3tteAj" id="1OEFvYvFAoP" role="3ttcQu">
       <property role="TrG5h" value="urdf" />
       <node concept="17QB3L" id="1OEFvYvFAoT" role="3ttcR6" />

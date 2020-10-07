@@ -14,13 +14,13 @@
     <dependency reexport="false">a5949a30-34e6-4033-823a-25cc66135ce1(Microblx)</dependency>
     <dependency reexport="false">88e31b22-f7a1-4ed1-a668-9711cad402e2(Geometry)</dependency>
     <dependency reexport="false">3459f9c4-b876-4b39-b656-59424a2a8ae3(KinematicChains_Algorithm)</dependency>
+    <dependency reexport="false">3bb73e68-12bc-4a5e-9c28-2bb221bc3095(Geometry_Algorithm)</dependency>
   </dependencies>
   <languageVersions>
     <language slang="l:a8f70f9e-ef01-499f-885c-c79273fa1695:Algorithm" version="0" />
     <language slang="l:4cc07462-84b3-4d01-8adb-629ddd3cebd4:Capabilities" version="0" />
     <language slang="l:218e40b4-75d4-4de8-83e6-b31e4da8bcee:Component" version="0" />
     <language slang="l:17ce8e5a-8510-4af6-a493-490e056b4626:ComponentBehavior" version="0" />
-    <language slang="l:b75dd154-bfb3-42b8-81b5-9a0a9007b161:ComponentMicroblxGenerator" version="0" />
     <language slang="l:9356c85b-d8d9-4f77-a6c3-7a0852b5bf29:Controller" version="0" />
     <language slang="l:88e31b22-f7a1-4ed1-a668-9711cad402e2:Geometry" version="0" />
     <language slang="l:3bb73e68-12bc-4a5e-9c28-2bb221bc3095:Geometry_Algorithm" version="0" />
@@ -38,6 +38,7 @@
     <module reference="3f233e7f-b8a6-46d2-a57f-795d56775243(Annotations)" version="0" />
     <module reference="9356c85b-d8d9-4f77-a6c3-7a0852b5bf29(Controller)" version="0" />
     <module reference="88e31b22-f7a1-4ed1-a668-9711cad402e2(Geometry)" version="0" />
+    <module reference="3bb73e68-12bc-4a5e-9c28-2bb221bc3095(Geometry_Algorithm)" version="0" />
     <module reference="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" version="0" />
     <module reference="3459f9c4-b876-4b39-b656-59424a2a8ae3(KinematicChains_Algorithm)" version="0" />
     <module reference="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" version="0" />
