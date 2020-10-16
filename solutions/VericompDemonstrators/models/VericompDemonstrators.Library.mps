@@ -27,6 +27,10 @@
       <concept id="8431561705660014078" name="Algorithm.structure.ScheduleStatementList" flags="ng" index="2qD35c">
         <child id="8431561705660014082" name="statements" index="2qD3aK" />
       </concept>
+      <concept id="349167071911517046" name="Algorithm.structure.FixedSizeArrayType" flags="ig" index="slerG">
+        <property id="349167071911849189" name="size" index="sit5Z" />
+        <child id="874355859793584745" name="componentType" index="2ipnhG" />
+      </concept>
       <concept id="349167071914761882" name="Algorithm.structure.StatementBasedSchedulerBlock" flags="ng" index="spAc0">
         <child id="8213653556241840446" name="schedule" index="1e5ZHq" />
       </concept>
@@ -548,8 +552,9 @@
       <node concept="1OHxBU" id="2dauTz5XHQd" role="2YOnzZ">
         <property role="TrG5h" value="array_access" />
         <property role="1OHxBQ" value="6po$YwiVCCm/In" />
-        <node concept="10Q1$e" id="2dauTz5XHQe" role="1tU5fm">
-          <node concept="70UUS" id="2dauTz5XHQy" role="10Q1$1" />
+        <node concept="slerG" id="5SweSwB1GL7" role="1tU5fm">
+          <property role="sit5Z" value="7" />
+          <node concept="70UUS" id="5SweSwB1GLj" role="2ipnhG" />
         </node>
       </node>
       <node concept="1OHxBU" id="2dauTz5XHQf" role="2YOnzZ">
