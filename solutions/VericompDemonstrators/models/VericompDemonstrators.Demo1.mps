@@ -14,7 +14,6 @@
     <engage id="8d7c3baa-c6d4-442a-843a-34b7b957af1e" name="Algorithm_CGenerator" />
     <engage id="99a33176-f2ba-469b-b8f8-df38e8025aba" name="Geometry_CGenerator" />
     <engage id="799e1c52-9b30-4cc9-95fb-3ef4e103cc77" name="ComponentOrocosGenerator" />
-    <engage id="39e764cb-e4fa-4923-82f4-60e672350a27" name="OrocosProgramScript" />
   </languages>
   <imports>
     <import index="s8z2" ref="r:58a77185-9e81-4001-bcd8-e8f0f3f58e1a(VericompDemonstrators.Library)" />
@@ -99,21 +98,28 @@
     </language>
     <language id="17ce8e5a-8510-4af6-a493-490e056b4626" name="ComponentBehavior">
       <concept id="5130055757462274828" name="ComponentBehavior.structure.AlgorithmBehavior" flags="ng" index="2UjhQb">
-        <reference id="5130055757462275089" name="algorithm" index="2UjhEm" />
+        <reference id="1675187024461162227" name="schedule" index="MpDda" />
         <child id="5130055757462401505" name="portMap" index="2UjYXA" />
       </concept>
       <concept id="5130055757462273192" name="ComponentBehavior.structure.SimpleLifeCycle" flags="ng" index="2Uju8J">
+        <child id="8374385045167234532" name="algorithm" index="LJDsK" />
         <child id="5130055757462274652" name="updateBehavior" index="2UjhNr" />
       </concept>
       <concept id="5130055757462401499" name="ComponentBehavior.structure.PortToPortMapping" flags="ng" index="2UjYXs">
         <reference id="5130055757462401500" name="componentPort" index="2UjYXr" />
       </concept>
       <concept id="6492422957874134487" name="ComponentBehavior.structure.ToPortMapping" flags="ng" index="1XH0mv">
-        <reference id="5130055757462401502" name="algorithmPort" index="2UjYXp" />
+        <reference id="8374385045167474518" name="algorithmPort" index="LIGQ2" />
       </concept>
     </language>
     <language id="a8f70f9e-ef01-499f-885c-c79273fa1695" name="Algorithm">
       <concept id="7995833768567805407" name="Algorithm.structure.DataConnection" flags="ng" index="2cu7QH" />
+      <concept id="1292841379851053318" name="Algorithm.structure.AlgorithmBlockInst" flags="ng" index="2d0V5$">
+        <reference id="1292841379851053319" name="type" index="2d0V5_" />
+      </concept>
+      <concept id="7995833768580493688" name="Algorithm.structure.ITriggerConnectorProvider" flags="ng" index="2dDH$a">
+        <child id="1550618328762864956" name="triggers" index="2pAz8r" />
+      </concept>
       <concept id="7995833768579682031" name="Algorithm.structure.IConnector" flags="ng" index="2dHiqt">
         <child id="7995833768579682034" name="connection2" index="2dHiq0" />
         <child id="7995833768579682032" name="connection1" index="2dHiq2" />
@@ -122,10 +128,15 @@
         <reference id="7995833768567805408" name="instance" index="2cu7Qi" />
         <reference id="1779622228161425" name="port" index="2mI24v" />
       </concept>
+      <concept id="7995833768577507008" name="Algorithm.structure.TriggerConnection" flags="ng" index="2dP7qM" />
       <concept id="2483553733153713492" name="Algorithm.structure.DataBlock" flags="ng" index="vjVuy" />
       <concept id="2483553733153713486" name="Algorithm.structure.AlgorithmBlock" flags="ng" index="vjVuS">
+        <child id="1550618328762864954" name="scheduler_blocks" index="2pAz8t" />
         <child id="1550618328762864953" name="data_blocks" index="2pAz8u" />
         <child id="1550618328762864952" name="function_blocks" index="2pAz8v" />
+      </concept>
+      <concept id="2077603528175021362" name="Algorithm.structure.SchedulerBlockInst" flags="ng" index="2$bkLk">
+        <reference id="2077603528175021366" name="type" index="2$bkLg" />
       </concept>
       <concept id="5416189171681144221" name="Algorithm.structure.FunctionBlockInst" flags="ng" index="2Ptgr7">
         <reference id="5416189171681144225" name="type" index="2PtgrV" />
@@ -133,6 +144,7 @@
       <concept id="5195753005471121027" name="Algorithm.structure.IDataConnectorProvider" flags="ng" index="3fRjHn">
         <child id="1550618328762864955" name="closures" index="2pAz8s" />
       </concept>
+      <concept id="7268768516385108286" name="Algorithm.structure.TriggerConnector" flags="ng" index="1psEHa" />
       <concept id="7374807014778505743" name="Algorithm.structure.DataConnector" flags="ng" index="1OHxBB" />
     </language>
     <language id="14d6bc92-051d-4467-84c8-9af7439a864f" name="Orocos">
@@ -165,11 +177,15 @@
     <node concept="2Uju8J" id="2dCct2EP1fN" role="2WWV5w">
       <property role="TrG5h" value="ctrl_life_cycle" />
       <node concept="2UjhQb" id="2dCct2EP1fP" role="2UjhNr">
-        <ref role="2UjhEm" node="2dCct2EOiSW" resolve="CtrlAlgorithm" />
+        <ref role="MpDda" node="1RcvbWEv4z$" resolve="sched" />
         <node concept="2UjYXs" id="7h1sGqo1loH" role="2UjYXA">
           <ref role="2UjYXr" node="2dCct2EP1f1" resolve="q" />
-          <ref role="2UjYXp" node="2dCct2EP1fV" resolve="q" />
+          <ref role="LIGQ2" node="1whTsdskCEa" resolve="q_set" />
         </node>
+      </node>
+      <node concept="2d0V5$" id="1RcvbWEv548" role="LJDsK">
+        <property role="TrG5h" value="pid" />
+        <ref role="2d0V5_" node="1whTsdskBCr" resolve="CtrlAlgorithm" />
       </node>
     </node>
   </node>
@@ -283,6 +299,16 @@
   </node>
   <node concept="vjVuS" id="1whTsdskBCr">
     <property role="TrG5h" value="CtrlAlgorithm" />
+    <node concept="1psEHa" id="1RcvbWEv4xr" role="2pAz8r">
+      <node concept="2dP7qM" id="1RcvbWEv4xs" role="2dHiq2">
+        <ref role="2cu7Qi" node="1RcvbWEv4z$" resolve="sched" />
+        <ref role="2mI24v" to="s8z2:1RcvbWEv4zs" resolve="fcall" />
+      </node>
+      <node concept="2dP7qM" id="1RcvbWEv4xt" role="2dHiq0">
+        <ref role="2cu7Qi" node="1RcvbWEv4xm" resolve="ctrl" />
+        <ref role="2mI24v" to="s8z2:5bARvk415m$" resolve="trigger" />
+      </node>
+    </node>
     <node concept="vjVuy" id="1whTsdskBIl" role="2pAz8u">
       <property role="TrG5h" value="dt" />
       <node concept="10P55v" id="1whTsdskBI$" role="1tU5fm" />
@@ -322,9 +348,9 @@
         </node>
       </node>
     </node>
-    <node concept="2Ptgr7" id="4P16e60bbmz" role="2pAz8v">
+    <node concept="2Ptgr7" id="1RcvbWEv4xm" role="2pAz8v">
       <property role="TrG5h" value="ctrl" />
-      <ref role="2PtgrV" to="s8z2:1m4TMuc7H7O" resolve="PIDController" />
+      <ref role="2PtgrV" to="s8z2:5bARvk415mx" resolve="PIDController" />
     </node>
     <node concept="vjVuy" id="1whTsdskBE8" role="2pAz8u">
       <property role="TrG5h" value="q_msr" />
@@ -485,8 +511,8 @@
     </node>
     <node concept="1OHxBB" id="4P16e60bbni" role="2pAz8s">
       <node concept="2cu7QH" id="4P16e60bbnj" role="2dHiq2">
-        <ref role="2cu7Qi" node="4P16e60bbmz" resolve="ctrl" />
         <ref role="2mI24v" to="s8z2:1m4TMuc7H7P" resolve="dt" />
+        <ref role="2cu7Qi" node="1RcvbWEv4xm" resolve="ctrl" />
       </node>
       <node concept="2cu7QH" id="4P16e60bbnk" role="2dHiq0">
         <ref role="2cu7Qi" node="1whTsdskBIl" resolve="dt" />
@@ -495,8 +521,8 @@
     </node>
     <node concept="1OHxBB" id="4P16e60bbnr" role="2pAz8s">
       <node concept="2cu7QH" id="4P16e60bbns" role="2dHiq2">
-        <ref role="2cu7Qi" node="4P16e60bbmz" resolve="ctrl" />
         <ref role="2mI24v" to="s8z2:1m4TMuc7H80" resolve="dsr" />
+        <ref role="2cu7Qi" node="1RcvbWEv4xm" resolve="ctrl" />
       </node>
       <node concept="2cu7QH" id="4P16e60bbnt" role="2dHiq0">
         <ref role="2cu7Qi" node="1whTsdskCEa" resolve="q_set" />
@@ -505,8 +531,8 @@
     </node>
     <node concept="1OHxBB" id="4P16e60bbnK" role="2pAz8s">
       <node concept="2cu7QH" id="4P16e60bbnL" role="2dHiq2">
-        <ref role="2cu7Qi" node="4P16e60bbmz" resolve="ctrl" />
         <ref role="2mI24v" to="s8z2:1m4TMuc7H83" resolve="msr" />
+        <ref role="2cu7Qi" node="1RcvbWEv4xm" resolve="ctrl" />
       </node>
       <node concept="2cu7QH" id="4P16e60bbnM" role="2dHiq0">
         <ref role="2cu7Qi" node="1whTsdskBE8" resolve="q_msr" />
@@ -515,8 +541,8 @@
     </node>
     <node concept="1OHxBB" id="4P16e60bbo8" role="2pAz8s">
       <node concept="2cu7QH" id="4P16e60bbo9" role="2dHiq2">
-        <ref role="2cu7Qi" node="4P16e60bbmz" resolve="ctrl" />
         <ref role="2mI24v" to="s8z2:1m4TMuc7H86" resolve="out" />
+        <ref role="2cu7Qi" node="1RcvbWEv4xm" resolve="ctrl" />
       </node>
       <node concept="2cu7QH" id="4P16e60bboa" role="2dHiq0">
         <ref role="2cu7Qi" node="1whTsdskBEN" resolve="tau" />
@@ -525,8 +551,8 @@
     </node>
     <node concept="1OHxBB" id="4P16e60bboz" role="2pAz8s">
       <node concept="2cu7QH" id="4P16e60bbo$" role="2dHiq2">
-        <ref role="2cu7Qi" node="4P16e60bbmz" resolve="ctrl" />
         <ref role="2mI24v" to="s8z2:1m4TMuc7H7R" resolve="kp" />
+        <ref role="2cu7Qi" node="1RcvbWEv4xm" resolve="ctrl" />
       </node>
       <node concept="2cu7QH" id="4P16e60bbo_" role="2dHiq0">
         <ref role="2cu7Qi" node="1whTsdskBKa" resolve="p_gain" />
@@ -535,8 +561,8 @@
     </node>
     <node concept="1OHxBB" id="4P16e60bbpU" role="2pAz8s">
       <node concept="2cu7QH" id="4P16e60bbpV" role="2dHiq2">
-        <ref role="2cu7Qi" node="4P16e60bbmz" resolve="ctrl" />
         <ref role="2mI24v" to="s8z2:1m4TMuc7H7U" resolve="ki" />
+        <ref role="2cu7Qi" node="1RcvbWEv4xm" resolve="ctrl" />
       </node>
       <node concept="2cu7QH" id="4P16e60bbpW" role="2dHiq0">
         <ref role="2cu7Qi" node="1whTsdskBFx" resolve="i_gain" />
@@ -545,8 +571,8 @@
     </node>
     <node concept="1OHxBB" id="4P16e60bbp1" role="2pAz8s">
       <node concept="2cu7QH" id="4P16e60bbp2" role="2dHiq2">
-        <ref role="2cu7Qi" node="4P16e60bbmz" resolve="ctrl" />
         <ref role="2mI24v" to="s8z2:1m4TMuc7H7X" resolve="kd" />
+        <ref role="2cu7Qi" node="1RcvbWEv4xm" resolve="ctrl" />
       </node>
       <node concept="2cu7QH" id="4P16e60bbp3" role="2dHiq0">
         <ref role="2cu7Qi" node="1whTsdskBKM" resolve="d_gain" />
@@ -555,8 +581,8 @@
     </node>
     <node concept="1OHxBB" id="4P16e60bbpy" role="2pAz8s">
       <node concept="2cu7QH" id="4P16e60bbpz" role="2dHiq2">
-        <ref role="2cu7Qi" node="4P16e60bbmz" resolve="ctrl" />
         <ref role="2mI24v" to="s8z2:1m4TMuc7H89" resolve="integ" />
+        <ref role="2cu7Qi" node="1RcvbWEv4xm" resolve="ctrl" />
       </node>
       <node concept="2cu7QH" id="4P16e60bbp$" role="2dHiq0">
         <ref role="2cu7Qi" node="1whTsdskBMn" resolve="integ" />
@@ -565,13 +591,17 @@
     </node>
     <node concept="1OHxBB" id="4P16e60bbqH" role="2pAz8s">
       <node concept="2cu7QH" id="4P16e60bbqI" role="2dHiq2">
-        <ref role="2cu7Qi" node="4P16e60bbmz" resolve="ctrl" />
         <ref role="2mI24v" to="s8z2:1m4TMuc7H8c" resolve="err_prev" />
+        <ref role="2cu7Qi" node="1RcvbWEv4xm" resolve="ctrl" />
       </node>
       <node concept="2cu7QH" id="4P16e60bbqJ" role="2dHiq0">
         <ref role="2cu7Qi" node="1whTsdskBNz" resolve="err_prev" />
         <ref role="2mI24v" node="1whTsdskBNz" resolve="err_prev" />
       </node>
+    </node>
+    <node concept="2$bkLk" id="1RcvbWEv4z$" role="2pAz8t">
+      <property role="TrG5h" value="sched" />
+      <ref role="2$bkLg" to="s8z2:1RcvbWEv4zl" resolve="SingleFCall" />
     </node>
   </node>
 </model>
