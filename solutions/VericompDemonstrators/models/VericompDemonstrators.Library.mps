@@ -31,18 +31,28 @@
       <concept id="349167071914761882" name="Algorithm.structure.StatementBasedSchedulerBlock" flags="ng" index="spAc0">
         <child id="8213653556241840446" name="schedule" index="1e5ZHq" />
       </concept>
+      <concept id="2483553733153713492" name="Algorithm.structure.DataBlock" flags="ng" index="vjVuy" />
       <concept id="2483553733153713493" name="Algorithm.structure.SchedulerBlock" flags="ng" index="vjVuz">
         <child id="7268768516385280653" name="data_ports" index="1prWzT" />
         <child id="7374807014778514693" name="trigger_ports" index="1OHzVH" />
+      </concept>
+      <concept id="2483553733153713486" name="Algorithm.structure.AlgorithmBlock" flags="ng" index="vjVuS">
+        <child id="1550618328762864954" name="scheduler_blocks" index="2pAz8t" />
+        <child id="1550618328762864953" name="data_blocks" index="2pAz8u" />
       </concept>
       <concept id="2077603528172925392" name="Algorithm.structure.Library" flags="ng" index="2$3l2Q">
         <child id="2077603528173865926" name="scheduler_blocks" index="2$cYEw" />
         <child id="5416189171681058805" name="function_blocks" index="2PtZiJ" />
       </concept>
+      <concept id="2077603528175021362" name="Algorithm.structure.SchedulerBlockInst" flags="ng" index="2$bkLk">
+        <reference id="2077603528175021366" name="type" index="2$bkLg" />
+      </concept>
       <concept id="65996431592056450" name="Algorithm.structure.FixedDataFlowSchedulerBlock" flags="ng" index="2__D7_">
         <child id="65996431592056451" name="schedule" index="2__D7$" />
       </concept>
+      <concept id="65996431591631846" name="Algorithm.structure.EmptySchedulerBlock" flags="ng" index="2_B1M1" />
       <concept id="8204000063695768669" name="Algorithm.structure.PredefinedFunctionBlock" flags="ng" index="G13Fa" />
+      <concept id="5830008280348868255" name="Algorithm.structure.PredefinedAlgorithmBlock" flags="ng" index="VbYsV" />
       <concept id="3725923812855012100" name="Algorithm.structure.FunctionBlock" flags="ng" index="2YOnzN">
         <child id="3725923812855012107" name="trigger_port" index="2YOnzW" />
         <child id="3725923812855012104" name="data_ports" index="2YOnzZ" />
@@ -59,7 +69,7 @@
         <property id="1550618328762367609" name="nblx" index="2p$X_u" />
         <property id="8204000063695768670" name="module" index="G13F9" />
         <property id="8204000063695768673" name="import" index="G13FQ" />
-        <property id="1455541779002196627" name="function" index="1h6pOq" />
+        <property id="1455541779002196627" name="preDefinedName" index="1h6pOq" />
       </concept>
       <concept id="7268768516385006770" name="Algorithm.structure.TriggerPort" flags="ng" index="1pt3V6">
         <property id="65996431591721054" name="direction" index="2_BrWT" />
@@ -318,6 +328,13 @@
   </node>
   <node concept="2$3l2Q" id="4P16e60b9aS">
     <property role="TrG5h" value="CtrlSchedules" />
+    <node concept="2_B1M1" id="1XH6oK6e$rx" role="2$cYEw">
+      <property role="TrG5h" value="integ" />
+      <node concept="1pt3V6" id="1XH6oK6e$s4" role="1OHzVH">
+        <property role="TrG5h" value="trigger" />
+        <property role="2_BrWT" value="3EtQu_uj5h/In" />
+      </node>
+    </node>
     <node concept="2__D7_" id="4P16e60b9bF" role="2$cYEw">
       <property role="TrG5h" value="p_sched" />
       <node concept="1e5Z75" id="3fay3NODEyi" role="2__D7$">
@@ -620,6 +637,39 @@
         <property role="TrG5h" value="trigger" />
         <property role="2_BrWT" value="3EtQu_uj5h/In" />
       </node>
+    </node>
+  </node>
+  <node concept="VbYsV" id="1XH6oK6e$kl">
+    <property role="TrG5h" value="IntegratorAsABlock" />
+    <property role="G13F9" value="ctrl2b" />
+    <property role="G13FQ" value="ctrl2b.functions.ctrl2b" />
+    <property role="1h6pOq" value="ctrl2b_integ" />
+    <property role="2p$X_u" value="ctrl2b_integ_nbx" />
+    <node concept="vjVuy" id="1XH6oK6e$km" role="2pAz8u">
+      <property role="TrG5h" value="dt" />
+      <node concept="10P55v" id="1XH6oK6e$k$" role="1tU5fm" />
+    </node>
+    <node concept="vjVuy" id="1XH6oK6e$ks" role="2pAz8u">
+      <property role="TrG5h" value="err" />
+      <node concept="10Q1$e" id="1XH6oK6e$kJ" role="1tU5fm">
+        <node concept="10P55v" id="1XH6oK6e$kF" role="10Q1$1" />
+      </node>
+    </node>
+    <node concept="vjVuy" id="1XH6oK6e$kY" role="2pAz8u">
+      <property role="TrG5h" value="out" />
+      <node concept="10Q1$e" id="1XH6oK6e$lf" role="1tU5fm">
+        <node concept="10P55v" id="1XH6oK6e$l9" role="10Q1$1" />
+      </node>
+    </node>
+    <node concept="vjVuy" id="1XH6oK6eB_D" role="2pAz8u">
+      <property role="TrG5h" value="integ" />
+      <node concept="10Q1$e" id="1XH6oK6eB_X" role="1tU5fm">
+        <node concept="10P55v" id="1XH6oK6eB_R" role="10Q1$1" />
+      </node>
+    </node>
+    <node concept="2$bkLk" id="1XH6oK6e$s6" role="2pAz8t">
+      <property role="TrG5h" value="integ" />
+      <ref role="2$bkLg" node="1XH6oK6e$rx" resolve="integ" />
     </node>
   </node>
 </model>
