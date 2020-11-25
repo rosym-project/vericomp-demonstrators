@@ -178,6 +178,9 @@
         <reference id="5416189171681144225" name="type" index="2PtgrV" />
         <child id="7824622450030242532" name="attributes" index="f3WTd" />
       </concept>
+      <concept id="8374996105336129438" name="Algorithm.structure.PredefinedSBlockInst" flags="ng" index="2TVJ4b">
+        <child id="8374996105336129439" name="schedule" index="2TVJ4a" />
+      </concept>
       <concept id="5830008280348868255" name="Algorithm.structure.PredefinedAlgorithmBlock" flags="ng" index="VbYsV" />
       <concept id="8213653556241839009" name="Algorithm.structure.TriggerStatement" flags="ng" index="1e5Z75">
         <reference id="8213653556245970054" name="trigger" index="LPJVy" />
@@ -835,8 +838,8 @@
         <ref role="2mI24v" to="s8z2:2dauTz5XLiY" resolve="reset" />
       </node>
       <node concept="2dP7qM" id="2dauTz5XL_a" role="2dHiq0">
-        <ref role="2cu7Qi" node="53CmqhFVV0R" resolve="reset" />
-        <ref role="2mI24v" node="2dauTz5XLq9" resolve="reset" />
+        <ref role="2cu7Qi" node="7gTXDneuWWg" resolve="reset" />
+        <ref role="2mI24v" node="7gTXDneuWWn" resolve="reset_trig" />
       </node>
     </node>
     <node concept="1psEHa" id="lqX9cq7LAO" role="2pAz8r">
@@ -875,8 +878,8 @@
         <ref role="2mI24v" to="s8z2:1E4V7_ZwuMD" resolve="next" />
       </node>
       <node concept="2dP7qM" id="1Jhj3hSUsmd" role="2dHiq0">
-        <ref role="2cu7Qi" node="53CmqhFVV0Q" resolve="next" />
-        <ref role="2mI24v" node="2dauTz5XLpY" resolve="next" />
+        <ref role="2cu7Qi" node="7gTXDneuWWa" resolve="next" />
+        <ref role="2mI24v" node="7gTXDneuWWe" resolve="next_trig" />
       </node>
     </node>
     <node concept="2d0V5$" id="2dauTz5XLqk" role="2d0V5C">
@@ -1434,36 +1437,33 @@
       </node>
     </node>
   </node>
-  <node concept="2$3l2Q" id="2dauTz5Xj_f">
-    <property role="TrG5h" value="KinematicChainIteratorLib" />
-    <node concept="2_B1M1" id="2dauTz5XLpV" role="2$cYEw">
-      <property role="TrG5h" value="next" />
-      <node concept="1pt3V6" id="2dauTz5XLpY" role="1OHzVH">
-        <property role="TrG5h" value="next" />
-        <property role="2_BrWT" value="3EtQu_uj5h/In" />
-      </node>
-    </node>
-    <node concept="2_B1M1" id="2dauTz5XLq4" role="2$cYEw">
-      <property role="TrG5h" value="reset" />
-      <node concept="1pt3V6" id="2dauTz5XLq9" role="1OHzVH">
-        <property role="TrG5h" value="reset" />
-        <property role="2_BrWT" value="3EtQu_uj5h/In" />
-      </node>
-    </node>
-  </node>
   <node concept="VbYsV" id="53CmqhFVV0n">
     <property role="TrG5h" value="KinematicChainIterator" />
     <property role="G13F9" value="dyn2b" />
     <property role="G13FQ" value="dyn2b.example.chain_iterator" />
     <property role="1h6pOq" value="kcc_iterator" />
     <property role="2p$X_u" value="kcc_iterator_nbx" />
-    <node concept="2$bkLk" id="53CmqhFVV0Q" role="2pAz8t">
+    <node concept="2TVJ4b" id="7gTXDneuWWa" role="2pAz8t">
       <property role="TrG5h" value="next" />
-      <ref role="2$bkLg" node="2dauTz5XLpV" resolve="next" />
+      <ref role="2$bkLg" node="7gTXDneuWWb" resolve="next_sblock" />
+      <node concept="2_B1M1" id="7gTXDneuWWb" role="2TVJ4a">
+        <property role="TrG5h" value="next_sblock" />
+        <node concept="1pt3V6" id="7gTXDneuWWe" role="1OHzVH">
+          <property role="TrG5h" value="next_trig" />
+          <property role="2_BrWT" value="3EtQu_uj5h/In" />
+        </node>
+      </node>
     </node>
-    <node concept="2$bkLk" id="53CmqhFVV0R" role="2pAz8t">
+    <node concept="2TVJ4b" id="7gTXDneuWWg" role="2pAz8t">
       <property role="TrG5h" value="reset" />
-      <ref role="2$bkLg" node="2dauTz5XLq4" resolve="reset" />
+      <ref role="2$bkLg" node="7gTXDneuWWh" resolve="reset_sblock" />
+      <node concept="2_B1M1" id="7gTXDneuWWh" role="2TVJ4a">
+        <property role="TrG5h" value="reset_sblock" />
+        <node concept="1pt3V6" id="7gTXDneuWWn" role="1OHzVH">
+          <property role="TrG5h" value="reset_trig" />
+          <property role="2_BrWT" value="3EtQu_uj5h/In" />
+        </node>
+      </node>
     </node>
     <node concept="vjVuy" id="53CmqhFVV0o" role="2pAz8u">
       <property role="TrG5h" value="current_index" />
