@@ -52,6 +52,9 @@
       </concept>
       <concept id="65996431591631846" name="Algorithm.structure.EmptySchedulerBlock" flags="ng" index="2_B1M1" />
       <concept id="8204000063695768669" name="Algorithm.structure.PredefinedFunctionBlock" flags="ng" index="G13Fa" />
+      <concept id="8374996105336129438" name="Algorithm.structure.PredefinedSBlockInst" flags="ng" index="2TVJ4b">
+        <child id="8374996105336129439" name="schedule" index="2TVJ4a" />
+      </concept>
       <concept id="5830008280348868255" name="Algorithm.structure.PredefinedAlgorithmBlock" flags="ng" index="VbYsV" />
       <concept id="3725923812855012100" name="Algorithm.structure.FunctionBlock" flags="ng" index="2YOnzN">
         <child id="3725923812855012107" name="trigger_port" index="2YOnzW" />
@@ -335,13 +338,6 @@
   </node>
   <node concept="2$3l2Q" id="4P16e60b9aS">
     <property role="TrG5h" value="CtrlSchedules" />
-    <node concept="2_B1M1" id="1XH6oK6e$rx" role="2$cYEw">
-      <property role="TrG5h" value="integ" />
-      <node concept="1pt3V6" id="1XH6oK6e$s4" role="1OHzVH">
-        <property role="TrG5h" value="trigger" />
-        <property role="2_BrWT" value="3EtQu_uj5h/In" />
-      </node>
-    </node>
     <node concept="2__D7_" id="4P16e60b9bF" role="2$cYEw">
       <property role="TrG5h" value="p_sched" />
       <node concept="1e5Z75" id="3fay3NODEyi" role="2__D7$">
@@ -652,6 +648,17 @@
     <property role="G13FQ" value="ctrl2b.functions.ctrl2b" />
     <property role="1h6pOq" value="ctrl2b_integ" />
     <property role="2p$X_u" value="ctrl2b_integ_nbx" />
+    <node concept="2TVJ4b" id="7gTXDne_AEk" role="2pAz8t">
+      <property role="TrG5h" value="integ" />
+      <ref role="2$bkLg" node="7gTXDne_AEl" resolve="integ_sblock" />
+      <node concept="2_B1M1" id="7gTXDne_AEl" role="2TVJ4a">
+        <property role="TrG5h" value="integ_sblock" />
+        <node concept="1pt3V6" id="7gTXDne_AEq" role="1OHzVH">
+          <property role="TrG5h" value="integ_trig" />
+          <property role="2_BrWT" value="3EtQu_uj5h/In" />
+        </node>
+      </node>
+    </node>
     <node concept="vjVuy" id="1XH6oK6e$km" role="2pAz8u">
       <property role="TrG5h" value="dt" />
       <node concept="10P55v" id="1XH6oK6e$k$" role="1tU5fm" />
@@ -673,10 +680,6 @@
       <node concept="10Q1$e" id="1XH6oK6eB_X" role="1tU5fm">
         <node concept="10P55v" id="1XH6oK6eB_R" role="10Q1$1" />
       </node>
-    </node>
-    <node concept="2$bkLk" id="1XH6oK6e$s6" role="2pAz8t">
-      <property role="TrG5h" value="integ" />
-      <ref role="2$bkLg" node="1XH6oK6e$rx" resolve="integ" />
     </node>
   </node>
 </model>

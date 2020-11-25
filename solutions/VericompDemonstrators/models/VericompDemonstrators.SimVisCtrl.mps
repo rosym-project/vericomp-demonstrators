@@ -905,7 +905,7 @@
       <node concept="1psEHa" id="1XH6oK6e$qp" role="8Wnug">
         <node concept="2dP7qM" id="1XH6oK6e$qq" role="2dHiq2">
           <ref role="2cu7Qi" node="1XH6oK6e$lA" resolve="integ_" />
-          <ref role="2mI24v" to="s8z2:1XH6oK6e$s4" resolve="trigger" />
+          <ref role="2mI24v" to="s8z2:7gTXDne_AEq" resolve="integ_trig" />
         </node>
         <node concept="2dP7qM" id="1XH6oK6e$qr" role="2dHiq0">
           <ref role="2cu7Qi" node="4P16e60b9dB" resolve="pid" />
